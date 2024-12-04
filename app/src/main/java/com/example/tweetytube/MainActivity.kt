@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -34,21 +35,7 @@ class MainActivity : ComponentActivity() {
                     bottomBar = {
                         BottomNavbar(navController)
                     }) { innerPadding ->
-                    NavHost(
-                        modifier = Modifier.padding(innerPadding),
-                        navController = navController,
-                        startDestination = HomeScreen
-                    ) {
-                        composable<HomeScreen>() {
-                            Home()
-                        }
-                        composable<FavoriteScreen>() {
-                            Favorites()
-                        }
-                        composable<ProfileScreen>() {
-                            Profile()
-                        }
-                    }
+                    NavigationComponent(innerPadding = innerPadding, navController = navController)
                 }
             }
         }
@@ -56,6 +43,20 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Navigation(modifier: Modifier = Modifier, navController: NavController) {
-
+fun NavigationComponent(innerPadding: PaddingValues, navController: NavController) {
+    NavHost(
+        modifier = Modifier.padding(innerPadding),
+        navController = navController,
+        startDestination = HomeScreen
+    ) {
+        composable<HomeScreen>() {
+            Home()
+        }
+        composable<FavoriteScreen>() {
+            Favorites()
+        }
+        composable<ProfileScreen>() {
+            Profile()
+        }
+    }
 }
