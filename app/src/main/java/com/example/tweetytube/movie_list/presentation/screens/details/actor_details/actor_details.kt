@@ -1,4 +1,4 @@
-package com.example.tweetytube.presentation.screens.details.actor_details
+package com.example.tweetytube.movie_list.presentation.screens.details.actor_details
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

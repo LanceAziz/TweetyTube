@@ -1,4 +1,4 @@
-package com.example.tweetytube.presentation.components.bottom_navbar
+package com.example.tweetytube.movie_list.presentation.components.bottom_navbar
 
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.core.tween
@@ -6,7 +6,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -22,8 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.tweetytube.R
-import com.example.tweetytube.presentation.screens.Screen
-import com.example.tweetytube.presentation.screens.Screen.*
+import com.example.tweetytube.movie_list.presentation.screens.Screen
 import com.example.tweetytube.ui.theme.*
 import com.exyte.animatednavbar.AnimatedNavigationBar
 import com.exyte.animatednavbar.animation.balltrajectory.Parabolic
@@ -32,9 +30,9 @@ import com.exyte.animatednavbar.animation.indendshape.shapeCornerRadius
 
 
 enum class NavBarItems(@DrawableRes val icon: Int, val navigation: Screen) {
-    Favourite(icon = R.drawable.heart_solid, navigation = FavoriteScreen),
-    Feed(icon = R.drawable.house_solid, navigation = HomeScreen),
-    Profile(icon = R.drawable.user_solid, navigation = ProfileScreen)
+    Favourite(icon = R.drawable.heart_solid, navigation = Screen.FavoriteScreen),
+    Feed(icon = R.drawable.house_solid, navigation = Screen.HomeScreen),
+    Profile(icon = R.drawable.user_solid, navigation = Screen.ProfileScreen)
 }
 
 @Composable

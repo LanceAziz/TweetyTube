@@ -1,4 +1,4 @@
-package com.example.tweetytube.presentation.components.top_bar
+package com.example.tweetytube.movie_list.presentation.components.top_bar
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

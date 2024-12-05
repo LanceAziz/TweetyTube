@@ -1,4 +1,4 @@
-package com.example.tweetytube.presentation.screens.favorites
+package com.example.tweetytube.movie_list.presentation.screens.favorites
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
