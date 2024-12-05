@@ -54,6 +54,7 @@ dependencies {
     implementation("com.exyte:animated-navigation-bar:1.0.0")
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
+    implementation("io.coil-kt:coil-compose:2.4.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

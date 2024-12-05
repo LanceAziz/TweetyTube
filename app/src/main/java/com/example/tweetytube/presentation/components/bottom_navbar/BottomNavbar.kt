@@ -1,10 +1,12 @@
-package com.example.tweetytube.presentation.components
+package com.example.tweetytube.presentation.components.bottom_navbar
 
 import androidx.annotation.DrawableRes
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
@@ -15,6 +17,7 @@ import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -35,11 +38,12 @@ enum class NavBarItems(@DrawableRes val icon: Int, val navigation: Screen) {
 }
 
 @Composable
-fun BottomNavbar(navController: NavController) {
+fun BottomNavbar(navController: NavController, modifier: Modifier = Modifier) {
     var selectedIndex by remember { mutableIntStateOf(1) }
     AnimatedNavigationBar(
-        modifier = Modifier
-            .padding(bottom = 16.dp, start = 16.dp, end = 16.dp),
+        modifier = modifier
+            .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
+            .background(Color.Transparent),
         selectedIndex = selectedIndex,
         barColor = primaryLight,
         ballColor = secondaryLight,
