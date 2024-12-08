@@ -29,11 +29,11 @@ import com.example.tweetytube.R
 import com.example.tweetytube.ui.theme.*
 
 @Composable
-fun MovieCard() {
+fun MovieCard(image:String) {
     Column {
         Box {
             AsyncImage(
-                model = "https://image.tmdb.org/t/p/w500/yh64qw9mgXBvlaWDi7Q9tpUBAvH.jpg",
+                model = image,
                 contentDescription = "Image with rounded corners",
                 modifier = Modifier
                     .height(450.dp)
@@ -43,8 +43,8 @@ fun MovieCard() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .align(Alignment.TopEnd)
-                    .padding(top = 18.dp, end = 18.dp)
+                    .padding(top = 18.dp, end = 18.dp),
+                horizontalAlignment = Alignment.End,
             ) {
                 Icon(
                     modifier = Modifier

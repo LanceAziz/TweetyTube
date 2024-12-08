@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -17,8 +19,12 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        val properties = Properties()
+        properties.load(project.rootProject.file("local.properties").inputStream())
+
+        buildConfigField("String", "MOVIES_API_KEY", properties.getProperty("MOVIES_API_KEY"))
     }
 
     buildTypes {
@@ -39,16 +45,14 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
+
 }
 
 dependencies {
 
-    //Basic
+    // Basic
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -65,29 +69,34 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //Type-Safe Navigation
+    // Type-Safe Navigation
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
 
-    //Animated Splash Screen
+    // Animated Splash Screen
     implementation("androidx.core:core-splashscreen:1.0.1")
 
-    //Animated Bottom Navigation Bar
+    // Animated Bottom Navigation Bar
     implementation("com.exyte:animated-navigation-bar:1.0.0")
 
-    //Coil
+    // Coil
     implementation("io.coil-kt:coil-compose:2.4.0")
 
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
 
-    // retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // Room
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-paging:2.6.1")
 
     // Extended Icons
-    implementation("androidx.compose.material: material-icons-extended:1.5.4")
+    implementation("androidx.compose.material:material-icons-extended:1.7.5")
 }
 
 kapt {

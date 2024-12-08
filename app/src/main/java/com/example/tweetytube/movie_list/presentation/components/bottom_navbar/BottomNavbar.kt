@@ -21,7 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.tweetytube.R
-import com.example.tweetytube.movie_list.presentation.screens.Screen
+import com.example.tweetytube.movie_list.utils.Screen
 import com.example.tweetytube.ui.theme.*
 import com.exyte.animatednavbar.AnimatedNavigationBar
 import com.exyte.animatednavbar.animation.balltrajectory.Parabolic

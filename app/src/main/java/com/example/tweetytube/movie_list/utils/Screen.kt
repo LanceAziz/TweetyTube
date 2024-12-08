@@ -1,4 +1,4 @@
-package com.example.tweetytube.movie_list.presentation.screens
+package com.example.tweetytube.movie_list.utils
 
 import kotlinx.serialization.Serializable
 

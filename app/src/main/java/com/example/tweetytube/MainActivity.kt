@@ -19,7 +19,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.tweetytube.movie_list.presentation.components.bottom_navbar.BottomNavbar
 import com.example.tweetytube.movie_list.presentation.components.top_bar.TopBar
-import com.example.tweetytube.movie_list.presentation.screens.Screen.*
+import com.example.tweetytube.movie_list.utils.Screen.*
 import com.example.tweetytube.movie_list.presentation.screens.favorites.Favorites
 import com.example.tweetytube.movie_list.presentation.screens.home.Home
 import com.example.tweetytube.movie_list.presentation.screens.profile.Profile
