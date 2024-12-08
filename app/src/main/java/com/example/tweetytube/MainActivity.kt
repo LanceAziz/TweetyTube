@@ -24,7 +24,9 @@ import com.example.tweetytube.movie_list.presentation.screens.favorites.Favorite
 import com.example.tweetytube.movie_list.presentation.screens.home.Home
 import com.example.tweetytube.movie_list.presentation.screens.profile.Profile
 import com.example.tweetytube.ui.theme.AppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,7 +60,7 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
         startDestination = HomeScreen
     ) {
         composable<HomeScreen>() {
-            Home()
+            Home(navController)
         }
         composable<FavoriteScreen>() {
             Favorites()

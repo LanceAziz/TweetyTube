@@ -26,14 +26,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.tweetytube.R
+import com.example.tweetytube.movie_list.data.repo.local.Movie
+import com.example.tweetytube.movie_list.data.repo.remote.MoviesApi.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.ui.theme.*
 
 @Composable
-fun MovieCard(image:String) {
+fun MovieCard(movie:Movie) {
     Column {
         Box {
             AsyncImage(
-                model = image,
+                model = "${IMAGE_BASE_URL} + ${movie.poster_path}",
                 contentDescription = "Image with rounded corners",
                 modifier = Modifier
                     .height(450.dp)

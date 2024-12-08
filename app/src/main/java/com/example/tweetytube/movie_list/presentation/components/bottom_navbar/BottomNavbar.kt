@@ -14,14 +14,18 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.tweetytube.R
 import com.example.tweetytube.movie_list.utils.Screen
+import com.example.tweetytube.movie_list.viewModel.MovieListUiEvent
 import com.example.tweetytube.ui.theme.*
 import com.exyte.animatednavbar.AnimatedNavigationBar
 import com.exyte.animatednavbar.animation.balltrajectory.Parabolic
@@ -36,8 +40,11 @@ enum class NavBarItems(@DrawableRes val icon: Int, val navigation: Screen) {
 }
 
 @Composable
-fun BottomNavbar(navController: NavController, modifier: Modifier = Modifier) {
-    var selectedIndex by remember { mutableIntStateOf(1) }
+fun BottomNavbar(
+    navController: NavHostController,
+    modifier: Modifier = Modifier,
+) {
+    var selectedIndex by rememberSaveable { mutableIntStateOf(1) }
     AnimatedNavigationBar(
         modifier = modifier
             .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)

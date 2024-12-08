@@ -1,9 +1,13 @@
 package com.example.tweetytube.movie_list.data.repo.local
 
-data class Movie(
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class MovieEntity(
     val adult: Boolean,
     val backdrop_path: String,
-    val genre_ids: List<Int>,
+    val genre_ids: String,
     val original_language: String,
     val original_title: String,
     val overview: String,
@@ -14,6 +18,8 @@ data class Movie(
     val video: Boolean,
     val vote_average: Double,
     val vote_count: Int,
+
+    @PrimaryKey
     val id: Int,
     val category: String
 )
