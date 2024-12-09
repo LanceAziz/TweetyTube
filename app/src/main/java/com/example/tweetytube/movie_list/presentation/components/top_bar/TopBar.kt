@@ -44,7 +44,7 @@ fun TopBar() {
             Icon(
                 modifier = Modifier
                     .size(26.dp)
-                    .clickable{ TODO("Implement Search") },
+                    .clickable { TODO("Implement Search") },
                 painter = painterResource(id = R.drawable.search_solid),
                 contentDescription = "Search",
                 tint = MaterialTheme.colorScheme.outline

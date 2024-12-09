@@ -4,11 +4,11 @@ import kotlinx.serialization.Serializable
 
 sealed class Screen {
     @Serializable
-    data object HomeScreen: Screen()
+    data object HomeScreen : Screen()
 
     @Serializable
-    data object FavoriteScreen: Screen()
+    data object FavoriteScreen : Screen()
 
     @Serializable
-    data object ProfileScreen: Screen()
+    data object ProfileScreen : Screen()
 }
