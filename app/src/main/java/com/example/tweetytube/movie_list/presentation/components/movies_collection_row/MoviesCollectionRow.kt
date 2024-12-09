@@ -28,8 +28,8 @@ fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
             text = rowTitle,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.outline,
-            fontSize = 24.sp,
-            modifier = Modifier.padding(bottom = 8.dp)
+            fontSize = 26.sp,
+            modifier = Modifier.padding(bottom = 12.dp)
         )
         HorizontalPager(
             state = pagerState,
@@ -37,8 +37,8 @@ fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
                 .padding(bottom = 24.dp)
                 .fillMaxWidth(),
             contentPadding = PaddingValues(
-                start = if (pagerState.currentPage == 0) 8.dp else 32.dp,
-                end = if (pagerState.currentPage == pagerState.pageCount - 1) 8.dp else 32.dp
+                start = if (pagerState.currentPage == 0) 0.dp else 32.dp,
+                end = if (pagerState.currentPage == pagerState.pageCount - 1) 0.dp else 32.dp
             )
         ) { index ->
             val pageOffset =

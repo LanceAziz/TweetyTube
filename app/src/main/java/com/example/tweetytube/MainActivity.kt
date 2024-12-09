@@ -22,6 +22,7 @@ import com.example.tweetytube.movie_list.presentation.components.top_bar.TopBar
 import com.example.tweetytube.movie_list.presentation.screens.favorites.Favorites
 import com.example.tweetytube.movie_list.presentation.screens.home.Home
 import com.example.tweetytube.movie_list.presentation.screens.profile.Profile
+import com.example.tweetytube.movie_list.presentation.screens.search.Search
 import com.example.tweetytube.movie_list.utils.Screen.*
 import com.example.tweetytube.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -67,6 +68,9 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
         }
         composable<ProfileScreen>() {
             Profile()
+        }
+        composable<SearchScreen>() {
+            Search()
         }
     }
 }
