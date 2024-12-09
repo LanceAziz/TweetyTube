@@ -29,13 +29,15 @@ import com.example.tweetytube.R
 import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.movie_list.data.repo.remote.MoviesApi.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.ui.theme.*
+import kotlin.math.roundToInt
+import kotlin.math.roundToLong
 
 @Composable
 fun MovieCard(movie:Movie) {
     Column {
         Box {
             AsyncImage(
-                model = "${IMAGE_BASE_URL} + ${movie.poster_path}",
+                model = "${IMAGE_BASE_URL}${movie.poster_path}",
                 contentDescription = "Image with rounded corners",
                 modifier = Modifier
                     .height(450.dp)
@@ -66,13 +68,13 @@ fun MovieCard(movie:Movie) {
                 .padding(start = 8.dp, top = 18.dp)
         ) {
             Text(
-                text = "Mona 2",
+                text = movie.title,
                 fontWeight = FontWeight.Bold,
                 fontSize = 26.sp,
                 color = MaterialTheme.colorScheme.outline,
             )
             Text(
-                text = "Animation, Adventure, Comedy",
+                text = movie.vote_average.toString(),
                 fontSize = 14.sp,
                 color = primaryLight
             )

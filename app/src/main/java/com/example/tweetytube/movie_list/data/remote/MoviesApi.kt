@@ -11,7 +11,7 @@ interface MoviesApi {
     @GET("movie/{category}")
     suspend fun getMovies(
         @Path("category") category: String,
-        @Path("page") page: Int,
+        @Query("page") page: Int,
         @Query("api_key") apiKey: String = MOVIES_API_KEY
     ): MovieListDto
 
