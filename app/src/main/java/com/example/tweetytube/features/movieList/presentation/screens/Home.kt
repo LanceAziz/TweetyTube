@@ -18,21 +18,20 @@ fun Home() {
     val movieListState = movieListViewModel.movieListState.collectAsState().value
 
     val categoriesWithMovies = listOf(
-        Triple("Trending Now", movieListState.popularMovieList, movieListState.isLoadingPopular),
-        Triple("Upcoming Movies", movieListState.upcomingMovieList, movieListState.isLoadingUpcoming),
-        Triple("Top Rated Movies", movieListState.topRatedMovieList, movieListState.isLoadingTopRated)
+        "Trending Now" to movieListState.popularMovieList,
+        "Upcoming Movies" to movieListState.upcomingMovieList,
+        "Top Rated Movies" to movieListState.topRatedMovieList
     )
 
     LazyColumn {
         itemsIndexed(categoriesWithMovies) { index, item ->
-            val (categoryTitle, movieList, loading) = item
+            val (categoryTitle, movieList) = item
             if (index == 0) {
                 Spacer(modifier = Modifier.height(16.dp))
             }
             MoviesCollectionRow(
                 rowTitle = categoryTitle,
-                movies = movieList,
-                loading = loading
+                movies = movieList
             )
         }
     }

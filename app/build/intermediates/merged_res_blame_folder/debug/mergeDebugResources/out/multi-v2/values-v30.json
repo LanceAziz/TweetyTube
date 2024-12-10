@@ -4,7 +4,7 @@
             "outputFile": "com.example.tweetytube.app-mergeDebugResources-65:/values-v30/values-v30.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lance Aziz\\.gradle\\caches\\8.9\\transforms\\aab62f02962d33a28f51ee4c0b47021e\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\aab62f02962d33a28f51ee4c0b47021e\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

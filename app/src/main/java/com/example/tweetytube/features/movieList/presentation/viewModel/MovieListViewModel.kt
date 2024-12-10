@@ -77,7 +77,7 @@ class MovieListViewModel @Inject constructor(
 
                         is Resource.Success -> {
                             result.data?.let { movieList ->
-
+                                delay(5000)
                                 _movieListState.update { state ->
                                     when (category) {
                                         Category.POPULAR -> state.copy(

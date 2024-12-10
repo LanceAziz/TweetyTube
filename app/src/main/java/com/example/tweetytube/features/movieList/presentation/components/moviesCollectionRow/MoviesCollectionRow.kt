@@ -21,7 +21,7 @@ import com.example.tweetytube.movie_list.data.repo.local.Movie
 import kotlin.math.absoluteValue
 
 @Composable
-fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>, loading: Boolean) {
+fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
     Column {
         val pagerState = rememberPagerState(pageCount = { movies.size })
         Text(
@@ -63,7 +63,7 @@ fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>, loading: Boolean)
                     start = if (isFirstCard) 0.dp else 16.dp,
                     end = if (isLastCard) 0.dp else 16.dp
                 )) {
-                MovieCard(movie = movies[index], loading = loading)
+                MovieCard(movie = movies[index])
             }
         }
     }

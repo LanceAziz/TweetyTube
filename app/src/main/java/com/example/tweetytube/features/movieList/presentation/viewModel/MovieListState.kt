@@ -4,9 +4,9 @@ import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.core.utils.Category
 
 data class MovieListState(
-    val isLoadingPopular: Boolean = false,
-    val isLoadingUpcoming: Boolean = false,
-    val isLoadingTopRated: Boolean = false,
+    val isLoadingPopular: Boolean = true,
+    val isLoadingUpcoming: Boolean = true,
+    val isLoadingTopRated: Boolean = true,
     val currentCategory: String = Category.POPULAR,
 
     val popularMovieListPage: Int = 1,

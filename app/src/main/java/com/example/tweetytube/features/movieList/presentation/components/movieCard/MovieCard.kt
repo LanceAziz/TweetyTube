@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -34,23 +33,17 @@ import com.example.tweetytube.ui.theme.*
 import kotlin.math.roundToInt
 
 @Composable
-fun MovieCard(movie: Movie, loading: Boolean) {
+fun MovieCard(movie: Movie) {
     Column {
         Box {
-            if (loading == true) {
-                Box(modifier = Modifier.height(450.dp)) {
-                    CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-                }
-            } else {
-                AsyncImage(
-                    model = "${IMAGE_BASE_URL}${movie.poster_path}",
-                    contentDescription = "Image with rounded corners",
-                    modifier = Modifier
-                        .height(450.dp)
-                        .clip(RoundedCornerShape(28.dp)),
-                    contentScale = ContentScale.Crop
-                )
-            }
+            AsyncImage(
+                model = "${IMAGE_BASE_URL}${movie.poster_path}",
+                contentDescription = "Image with rounded corners",
+                modifier = Modifier
+                    .height(450.dp)
+                    .clip(RoundedCornerShape(28.dp)),
+                contentScale = ContentScale.Crop
+            )
             Column(
                 modifier = Modifier
                     .fillMaxWidth()

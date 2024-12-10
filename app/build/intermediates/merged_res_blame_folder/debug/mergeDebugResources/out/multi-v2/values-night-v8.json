@@ -4,7 +4,7 @@
             "outputFile": "com.example.tweetytube.app-mergeDebugResources-65:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Lance Aziz\\.gradle\\caches\\8.9\\transforms\\85b3e2fd79dcc1b2a9356d2a34c4dcdf\\transformed\\core-splashscreen-1.0.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\85b3e2fd79dcc1b2a9356d2a34c4dcdf\\transformed\\core-splashscreen-1.0.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Lance Aziz\\Desktop\\Atos Intern\\TweetyTube\\app\\src\\main\\res\\values-night\\Splash.xml",
+                    "source": "C:\\Users\\lance\\OneDrive\\Desktop\\Atos Project\\TweetyTube\\app\\src\\main\\res\\values-night\\Splash.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
