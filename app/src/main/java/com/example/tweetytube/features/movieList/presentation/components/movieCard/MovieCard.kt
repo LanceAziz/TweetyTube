@@ -35,12 +35,12 @@ import kotlin.math.roundToInt
 @Composable
 fun MovieCard(movie: Movie, loading: Boolean) {
     Column {
-        if (loading == true) {
-            Box(modifier = Modifier.fillMaxSize()) {
-                Text(text = "loading", modifier = Modifier.align(Alignment.Center))
-            }
-        } else {
-            Box {
+        Box {
+            if (loading == true) {
+                Box(modifier = Modifier.height(450.dp)) {
+                    Text(text = "loading", modifier = Modifier.align(Alignment.Center))
+                }
+            } else {
                 AsyncImage(
                     model = "${IMAGE_BASE_URL}${movie.poster_path}",
                     contentDescription = "Image with rounded corners",
@@ -49,54 +49,54 @@ fun MovieCard(movie: Movie, loading: Boolean) {
                         .clip(RoundedCornerShape(28.dp)),
                     contentScale = ContentScale.Crop
                 )
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 22.dp, end = 22.dp),
-                    horizontalAlignment = Alignment.End,
-                ) {
-                    Icon(
-                        modifier = Modifier
-                            .size(32.dp)
-                            .clickable { TODO("Implement Favorites") },
-                        painter = painterResource(id = R.drawable.heart_solid),
-                        contentDescription = "Favorite Button",
-                        tint = errorLight
-                    )
-                }
-
             }
-
             Column(
                 modifier = Modifier
-                    .fillMaxSize()
-                    .padding(start = 8.dp, top = 18.dp)
+                    .fillMaxWidth()
+                    .padding(top = 22.dp, end = 22.dp),
+                horizontalAlignment = Alignment.End,
             ) {
-                Text(
-                    text = movie.title,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 22.sp,
-                    color = MaterialTheme.colorScheme.outline,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(end = 8.dp)
+                Icon(
+                    modifier = Modifier
+                        .size(32.dp)
+                        .clickable { TODO("Implement Favorites") },
+                    painter = painterResource(id = R.drawable.heart_solid),
+                    contentDescription = "Favorite Button",
+                    tint = errorLight
                 )
-                Row {
-                    Text(
-                        text = ((movie.vote_average * 10).roundToInt() / 10f).toString(),
-                        fontSize = 14.sp,
-                        color = primaryLight
-                    )
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Icon(
-                        modifier = Modifier
-                            .size(18.dp)
-                            .clickable { TODO("Implement Favorites") },
-                        painter = painterResource(id = R.drawable.star_solid),
-                        contentDescription = "Favorite Button",
-                        tint = secondaryLight
-                    )
-                }
+            }
+
+        }
+
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(start = 8.dp, top = 18.dp)
+        ) {
+            Text(
+                text = movie.title,
+                fontWeight = FontWeight.Bold,
+                fontSize = 22.sp,
+                color = MaterialTheme.colorScheme.outline,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.padding(end = 8.dp)
+            )
+            Row {
+                Text(
+                    text = ((movie.vote_average * 10).roundToInt() / 10f).toString(),
+                    fontSize = 14.sp,
+                    color = primaryLight
+                )
+                Spacer(modifier = Modifier.width(6.dp))
+                Icon(
+                    modifier = Modifier
+                        .size(18.dp)
+                        .clickable { TODO("Implement Favorites") },
+                    painter = painterResource(id = R.drawable.star_solid),
+                    contentDescription = "Favorite Button",
+                    tint = secondaryLight
+                )
             }
         }
     }
