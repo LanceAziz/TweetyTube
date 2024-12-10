@@ -9,7 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.tweetytube.features.movieList.presentation.components.movies_collection_row.MoviesCollectionRow
+import com.example.tweetytube.features.movieList.presentation.components.moviesCollectionRow.MoviesCollectionRow
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 
 @Composable
@@ -30,7 +30,8 @@ fun Home() {
             }
             MoviesCollectionRow(
                 rowTitle = categoryTitle,
-                movies = movieList
+                movies = movieList,
+                loading = movieListState.isLoading
             )
         }
     }

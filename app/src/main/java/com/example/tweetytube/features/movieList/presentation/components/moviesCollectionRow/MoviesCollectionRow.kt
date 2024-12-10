@@ -1,4 +1,4 @@
-package com.example.tweetytube.features.movieList.presentation.components.movies_collection_row
+package com.example.tweetytube.features.movieList.presentation.components.moviesCollectionRow
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,12 +16,12 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.tweetytube.features.movieList.presentation.components.movie_card.MovieCard
+import com.example.tweetytube.features.movieList.presentation.components.movieCard.MovieCard
 import com.example.tweetytube.movie_list.data.repo.local.Movie
 import kotlin.math.absoluteValue
 
 @Composable
-fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
+fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>, loading: Boolean) {
     Column {
         val pagerState = rememberPagerState(pageCount = { movies.size })
         Text(
@@ -63,7 +63,7 @@ fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
                     start = if (isFirstCard) 0.dp else 16.dp,
                     end = if (isLastCard) 0.dp else 16.dp
                 )) {
-                MovieCard(movie = movies[index])
+                MovieCard(movie = movies[index], loading = loading)
             }
         }
     }
