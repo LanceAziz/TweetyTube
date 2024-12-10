@@ -36,7 +36,9 @@ import kotlin.math.roundToInt
 fun MovieCard(movie: Movie, loading: Boolean) {
     Column {
         if (loading == true) {
-            //loading
+            Box(modifier = Modifier.fillMaxSize()) {
+                Text(text = "loading", modifier = Modifier.align(Alignment.Center))
+            }
         } else {
             Box {
                 AsyncImage(

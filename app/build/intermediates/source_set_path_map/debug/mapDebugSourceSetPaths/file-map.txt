@@ -1,0 +1,70 @@
+com.example.tweetytube.app-annotation-experimental-1.4.1-0 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\02caa342f426d6bb1ea67f930109f93d\transformed\annotation-experimental-1.4.1\res
+com.example.tweetytube.app-activity-compose-1.9.3-1 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\0554ebbf1ea1fc82e0ca481c05fd61a7\transformed\activity-compose-1.9.3\res
+com.example.tweetytube.app-lifecycle-viewmodel-ktx-2.8.7-2 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\0d6f4f8f4bcca2451044fdc388e89ab5\transformed\lifecycle-viewmodel-ktx-2.8.7\res
+com.example.tweetytube.app-lifecycle-runtime-ktx-release-3 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\0d80421f800552088ef9059411530268\transformed\lifecycle-runtime-ktx-release\res
+com.example.tweetytube.app-lifecycle-runtime-release-4 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\101d5b9b8525b1be6c53f05008b59365\transformed\lifecycle-runtime-release\res
+com.example.tweetytube.app-sqlite-2.4.0-5 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\1693e29626bb48b2d3622e1591660bdb\transformed\sqlite-2.4.0\res
+com.example.tweetytube.app-fragment-1.5.1-6 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\1e4c0107d5aaf799c01ac37c5fe4be43\transformed\fragment-1.5.1\res
+com.example.tweetytube.app-lifecycle-viewmodel-release-7 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\1e8a11bfbe8233d86983feafa94a1768\transformed\lifecycle-viewmodel-release\res
+com.example.tweetytube.app-ui-unit-release-8 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\22a7cc7be40f490c0620687060c75848\transformed\ui-unit-release\res
+com.example.tweetytube.app-ui-graphics-release-9 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\30873dbf0ee16d545ee1c9434ca2c68a\transformed\ui-graphics-release\res
+com.example.tweetytube.app-material-icons-core-release-10 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\309152af9be29c96ac844b4e8ba6f21d\transformed\material-icons-core-release\res
+com.example.tweetytube.app-lifecycle-viewmodel-savedstate-2.8.7-11 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\35ca3d2d959c1bb7c8be083aaa0899da\transformed\lifecycle-viewmodel-savedstate-2.8.7\res
+com.example.tweetytube.app-navigation-common-2.8.4-12 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\376a6b525de91df8bb8bbb02709d1164\transformed\navigation-common-2.8.4\res
+com.example.tweetytube.app-startup-runtime-1.1.1-13 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\4a41d5541890e46a6b5c0cf87600301f\transformed\startup-runtime-1.1.1\res
+com.example.tweetytube.app-navigation-common-ktx-2.8.4-14 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\4b3b0f758686a41edf0d413b3153017d\transformed\navigation-common-ktx-2.8.4\res
+com.example.tweetytube.app-coil-base-2.4.0-15 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\4c4cfb24bd70008524aef02d3218a459\transformed\coil-base-2.4.0\res
+com.example.tweetytube.app-material-ripple-release-16 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\4cab7da6bf3fc67d188e59b8376edf5e\transformed\material-ripple-release\res
+com.example.tweetytube.app-ui-tooling-data-release-17 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\4d1ed897c5311ee3e5b4ca12cf02f24f\transformed\ui-tooling-data-release\res
+com.example.tweetytube.app-lifecycle-livedata-core-2.8.7-18 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\54d83aab8c7407d00f99b114b20ee45f\transformed\lifecycle-livedata-core-2.8.7\res
+com.example.tweetytube.app-ui-test-manifest-1.7.5-19 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\56ba2e82fb62682a392031ec4c242994\transformed\ui-test-manifest-1.7.5\res
+com.example.tweetytube.app-ui-geometry-release-20 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\59991c57b9150b80617b944de884a0b9\transformed\ui-geometry-release\res
+com.example.tweetytube.app-navigation-compose-2.8.4-21 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\606e4e28579fe8560a7ad74f903d55d6\transformed\navigation-compose-2.8.4\res
+com.example.tweetytube.app-sqlite-framework-2.4.0-22 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\63f755b383dd2b722d2595401ebea22e\transformed\sqlite-framework-2.4.0\res
+com.example.tweetytube.app-activity-1.9.3-23 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\6916ff22da894721f193f8d7a33590a4\transformed\activity-1.9.3\res
+com.example.tweetytube.app-lifecycle-process-2.8.7-24 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\6d4db70f622548e482b20033db4c552c\transformed\lifecycle-process-2.8.7\res
+com.example.tweetytube.app-foundation-release-25 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\6de2e55623d6b4c907945694ca875bb9\transformed\foundation-release\res
+com.example.tweetytube.app-lifecycle-viewmodel-compose-release-26 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\6f67b18b8ddfad2d1f7585c3669e4bef\transformed\lifecycle-viewmodel-compose-release\res
+com.example.tweetytube.app-foundation-layout-release-27 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\71a8af230409bb13c632756a8b0a3eff\transformed\foundation-layout-release\res
+com.example.tweetytube.app-hilt-navigation-1.2.0-28 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\76aa688032c6edf95a3e067d1c6edd8b\transformed\hilt-navigation-1.2.0\res
+com.example.tweetytube.app-ui-text-release-29 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\77f975b755d9d3fb171b67c04c52c462\transformed\ui-text-release\res
+com.example.tweetytube.app-core-runtime-2.2.0-30 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\7a0f5e410cbffe3bffd51875933cddf9\transformed\core-runtime-2.2.0\res
+com.example.tweetytube.app-lifecycle-livedata-core-ktx-2.8.7-31 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\7aadd2f41bea0e9ba594f0b4df6291d3\transformed\lifecycle-livedata-core-ktx-2.8.7\res
+com.example.tweetytube.app-core-splashscreen-1.0.1-32 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\85b3e2fd79dcc1b2a9356d2a34c4dcdf\transformed\core-splashscreen-1.0.1\res
+com.example.tweetytube.app-material-release-33 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\9681869a1d0d4e10b1788d1c70e05a6a\transformed\material-release\res
+com.example.tweetytube.app-emoji2-1.3.0-34 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\96d364d984c3cdbd2f89265327d63f38\transformed\emoji2-1.3.0\res
+com.example.tweetytube.app-savedstate-ktx-1.2.1-35 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\9edc117f77d8788da80e6a15ad6ef48b\transformed\savedstate-ktx-1.2.1\res
+com.example.tweetytube.app-navigation-runtime-2.8.4-36 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\9ee92b1abe45b3dfb0f7a9084858b53a\transformed\navigation-runtime-2.8.4\res
+com.example.tweetytube.app-material-icons-extended-release-37 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\9f17bf6155115dad8d38a41c2d035e1c\transformed\material-icons-extended-release\res
+com.example.tweetytube.app-room-runtime-2.6.1-38 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\a4d2041dd8832e2430e7b610eac80282\transformed\room-runtime-2.6.1\res
+com.example.tweetytube.app-animation-core-release-39 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\a68d915917b160bc79087a7874ac14a9\transformed\animation-core-release\res
+com.example.tweetytube.app-material3-release-40 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\aab62f02962d33a28f51ee4c0b47021e\transformed\material3-release\res
+com.example.tweetytube.app-runtime-release-41 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\ac773b3acd2b5585f89d1ce1b0fa758b\transformed\runtime-release\res
+com.example.tweetytube.app-savedstate-1.2.1-42 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\b17fa9748378445b477353d79759884f\transformed\savedstate-1.2.1\res
+com.example.tweetytube.app-lifecycle-livedata-2.8.7-43 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\b24bc8b24250876a930e32b3fea8da97\transformed\lifecycle-livedata-2.8.7\res
+com.example.tweetytube.app-graphics-path-1.0.1-44 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\b853b32f34d572d5df184fa129d8f46b\transformed\graphics-path-1.0.1\res
+com.example.tweetytube.app-ui-release-45 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\ba00e5e4f09f56c19d5888b4b1f82239\transformed\ui-release\res
+com.example.tweetytube.app-profileinstaller-1.3.1-46 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\bcfc6d24b3290623debe1217b6a32064\transformed\profileinstaller-1.3.1\res
+com.example.tweetytube.app-appcompat-resources-1.6.1-47 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\bfa1d391a4090e65118e874a0b54ad2c\transformed\appcompat-resources-1.6.1\res
+com.example.tweetytube.app-core-ktx-1.15.0-48 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\c03fe8f65e130c3fc7e4163f14122b8c\transformed\core-ktx-1.15.0\res
+com.example.tweetytube.app-room-ktx-2.6.1-49 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\caa4188e1aab87ae2ad8025a2c5986eb\transformed\room-ktx-2.6.1\res
+com.example.tweetytube.app-hilt-navigation-compose-1.2.0-50 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\cd71063a9be462fc02b4d2cee7e4dc04\transformed\hilt-navigation-compose-1.2.0\res
+com.example.tweetytube.app-ui-util-release-51 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\cfee32be6a1a97bc8ec035d60d460504\transformed\ui-util-release\res
+com.example.tweetytube.app-navigation-runtime-ktx-2.8.4-52 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\d1e21d889d623d1dbb4313e03aa8671c\transformed\navigation-runtime-ktx-2.8.4\res
+com.example.tweetytube.app-customview-poolingcontainer-1.0.0-53 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\e4adc8edda8e534d8c09312964e1e655\transformed\customview-poolingcontainer-1.0.0\res
+com.example.tweetytube.app-ui-tooling-release-54 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\e6991cf38d175d9276a4cd2161499edc\transformed\ui-tooling-release\res
+com.example.tweetytube.app-animation-release-55 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\eade0999d7f439619cc633962c45a3e4\transformed\animation-release\res
+com.example.tweetytube.app-core-1.15.0-56 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\ebfaf92756ad220042daacdb1b52508d\transformed\core-1.15.0\res
+com.example.tweetytube.app-activity-ktx-1.9.3-57 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\ee92fe534bf87928095f677a6e887fbd\transformed\activity-ktx-1.9.3\res
+com.example.tweetytube.app-ui-tooling-preview-release-58 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\efec45c2358e94f7cf75506817fd4e5b\transformed\ui-tooling-preview-release\res
+com.example.tweetytube.app-tracing-1.2.0-59 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\f5add0b336c3743dc6c882814eb332b1\transformed\tracing-1.2.0\res
+com.example.tweetytube.app-runtime-saveable-release-60 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\fadd64fbf4e3e2e5a64a997dfe04031b\transformed\runtime-saveable-release\res
+com.example.tweetytube.app-lifecycle-runtime-compose-release-61 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\fb3699b8959daa8414621748ff533228\transformed\lifecycle-runtime-compose-release\res
+com.example.tweetytube.app-room-paging-2.6.1-62 C:\Users\Lance Aziz\.gradle\caches\8.9\transforms\fd7135ce6e0f6293ca68c13d7173f90d\transformed\room-paging-2.6.1\res
+com.example.tweetytube.app-pngs-63 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\build\generated\res\pngs\debug
+com.example.tweetytube.app-resValues-64 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\build\generated\res\resValues\debug
+com.example.tweetytube.app-packageDebugResources-65 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.tweetytube.app-packageDebugResources-66 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.tweetytube.app-debug-67 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.tweetytube.app-debug-68 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\src\debug\res
+com.example.tweetytube.app-main-69 C:\Users\Lance Aziz\Desktop\Atos Intern\TweetyTube\app\src\main\res
