@@ -6,24 +6,16 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
-import com.example.tweetytube.movie_list.presentation.components.bottom_navbar.BottomNavbar
-import com.example.tweetytube.movie_list.presentation.components.top_bar.TopBar
-import com.example.tweetytube.movie_list.presentation.screens.favorites.Favorites
-import com.example.tweetytube.movie_list.presentation.screens.home.Home
-import com.example.tweetytube.movie_list.presentation.screens.profile.Profile
-import com.example.tweetytube.movie_list.presentation.screens.search.Search
-import com.example.tweetytube.movie_list.utils.Screen.*
+import com.example.tweetytube.core.navigation.NavigationComponent
+import com.example.tweetytube.features.search.presentation.viewModel.SearchViewModel
+import com.example.tweetytube.features.supplementary.bottomBar.BottomNavbar
+import com.example.tweetytube.features.supplementary.topBar.TopBar
 import com.example.tweetytube.ui.theme.AppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,8 +28,14 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 val navController = rememberNavController()
+                val searchViewModel: SearchViewModel = viewModel()
                 Scaffold(
-                    topBar = { TopBar() },
+                    topBar = {
+                        TopBar(
+                            navController = navController,
+                            searchViewModel = searchViewModel
+                        )
+                    },
                     bottomBar = { BottomNavbar(navController = navController) },
                     contentWindowInsets = WindowInsets(0.dp),
                 ) { innerPadding ->
@@ -47,30 +45,6 @@ class MainActivity : ComponentActivity() {
                     )
                 }
             }
-        }
-    }
-}
-
-@Composable
-fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostController) {
-    NavHost(
-        modifier = modifier
-            .padding(16.dp)
-            .clip(RoundedCornerShape(36.dp)),
-        navController = navController,
-        startDestination = HomeScreen
-    ) {
-        composable<HomeScreen>() {
-            Home(navController)
-        }
-        composable<FavoriteScreen>() {
-            Favorites()
-        }
-        composable<ProfileScreen>() {
-            Profile()
-        }
-        composable<SearchScreen>() {
-            Search()
         }
     }
 }
