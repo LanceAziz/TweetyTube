@@ -27,17 +27,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.tweetytube.R
+import com.example.tweetytube.core.utils.Urls.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.movie_list.data.repo.local.Movie
-import com.example.tweetytube.movie_list.data.repo.remote.MoviesApi.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.ui.theme.*
 import kotlin.math.roundToInt
 
 @Composable
-fun MovieCard(movie: Movie) {
+fun MovieCard(movieSearch: Movie) {
     Column {
         Box {
             AsyncImage(
-                model = "${IMAGE_BASE_URL}${movie.poster_path}",
+                model = "${IMAGE_BASE_URL}${movieSearch.poster_path}",
                 contentDescription = "Image with rounded corners",
                 modifier = Modifier
                     .height(450.dp)
@@ -68,7 +68,7 @@ fun MovieCard(movie: Movie) {
                 .padding(start = 8.dp, top = 18.dp)
         ) {
             Text(
-                text = movie.title,
+                text = movieSearch.title,
                 fontWeight = FontWeight.Bold,
                 fontSize = 22.sp,
                 color = MaterialTheme.colorScheme.outline,
@@ -78,15 +78,14 @@ fun MovieCard(movie: Movie) {
             )
             Row {
                 Text(
-                    text = ((movie.vote_average * 10).roundToInt() / 10f).toString(),
+                    text = ((movieSearch.vote_average * 10).roundToInt() / 10f).toString(),
                     fontSize = 14.sp,
                     color = primaryLight
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Icon(
                     modifier = Modifier
-                        .size(18.dp)
-                        .clickable { TODO("Implement Favorites") },
+                        .size(18.dp),
                     painter = painterResource(id = R.drawable.star_solid),
                     contentDescription = "Favorite Button",
                     tint = secondaryLight

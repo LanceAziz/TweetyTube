@@ -63,7 +63,7 @@ fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
                     start = if (isFirstCard) 0.dp else 16.dp,
                     end = if (isLastCard) 0.dp else 16.dp
                 )) {
-                MovieCard(movie = movies[index])
+                MovieCard(movieSearch = movies[index])
             }
         }
     }

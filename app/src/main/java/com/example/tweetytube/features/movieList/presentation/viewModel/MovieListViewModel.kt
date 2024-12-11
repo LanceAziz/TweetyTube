@@ -1,14 +1,14 @@
 package com.example.tweetytube.features.movieList.presentation.viewModel
 
 import android.util.Log
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.tweetytube.features.movieList.domain.repo.MovieListRepo
 import com.example.tweetytube.core.utils.Category
 import com.example.tweetytube.core.utils.Resource
+import com.example.tweetytube.features.movieList.domain.repo.MovieListRepo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.async
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
@@ -22,6 +22,14 @@ class MovieListViewModel @Inject constructor(
 
     private var _movieListState = MutableStateFlow(MovieListState())
     val movieListState = _movieListState.asStateFlow()
+
+    private val _searchText = mutableStateOf("")
+    val searchText get() = _searchText
+
+    fun setSearchText(value: String) {
+        _searchText.value = value
+    }
+
 
     init {
         fetchAllMovies()
@@ -77,7 +85,7 @@ class MovieListViewModel @Inject constructor(
 
                         is Resource.Success -> {
                             result.data?.let { movieList ->
-                                delay(5000)
+//                                delay(5000)
                                 _movieListState.update { state ->
                                     when (category) {
                                         Category.POPULAR -> state.copy(

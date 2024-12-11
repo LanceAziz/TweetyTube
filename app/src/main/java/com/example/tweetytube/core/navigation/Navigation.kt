@@ -22,7 +22,7 @@ import com.example.tweetytube.core.utils.Screen.SearchScreen
 import com.example.tweetytube.features.favorites.presentation.screens.Favorites
 import com.example.tweetytube.features.movieList.presentation.screens.Home
 import com.example.tweetytube.features.profile.presentation.screens.Profile
-import com.example.tweetytube.features.search.presentation.screens.Search
+import com.example.tweetytube.features.movieList.presentation.screens.Search
 
 data class AnimationTransitions(
     val enterTransition: () -> EnterTransition,
@@ -45,7 +45,7 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
             .padding(16.dp)
             .clip(RoundedCornerShape(36.dp)),
         navController = navController,
-        startDestination = HomeScreen
+        startDestination = SearchScreen
     ) {
         composable<HomeScreen>(
             enterTransition = { animations.enterTransition() },
@@ -77,7 +77,7 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
             popEnterTransition = { animations.enterTransition() },
             popExitTransition = { animations.exitTransition() }
         ) {
-            Search(navController)
+            Search()
         }
     }
 }

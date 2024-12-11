@@ -29,11 +29,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.tweetytube.R
 import com.example.tweetytube.core.utils.Screen
-import com.example.tweetytube.features.search.presentation.viewModel.SearchViewModel
+import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.ui.theme.*
 
 @Composable
-fun TopBar(navController: NavHostController, searchViewModel: SearchViewModel) {
+fun TopBar(navController: NavHostController, searchViewModel: MovieListViewModel) {
     val navBackStackEntry = navController.currentBackStackEntryAsState().value
     val currentDestination = navBackStackEntry?.destination
 
@@ -55,8 +55,8 @@ fun TopBar(navController: NavHostController, searchViewModel: SearchViewModel) {
             ) == true
         ) {
             OutlinedTextField(
-                value = searchViewModel.getSearchText,
-                onValueChange = { searchViewModel.updateSearchText(newSearchText = it) },
+                value = searchViewModel.searchText.value,
+                onValueChange = { searchViewModel.setSearchText(it) },
                 placeholder = { Text("Search...") },
                 singleLine = true,
                 maxLines = 1,

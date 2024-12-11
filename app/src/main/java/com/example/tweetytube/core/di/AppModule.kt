@@ -2,8 +2,9 @@ package com.example.tweetytube.core.di
 
 import android.app.Application
 import androidx.room.Room
+import com.example.tweetytube.core.utils.Urls.Companion.BASE_URL
+import com.example.tweetytube.features.movieList.data.remote.MoviesApi
 import com.example.tweetytube.movie_list.data.repo.local.MovieDatabase
-import com.example.tweetytube.movie_list.data.repo.remote.MoviesApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -32,7 +33,7 @@ object AppModule {
     fun providesMovieApi(): MoviesApi {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(MoviesApi.BASE_URL)
+            .baseUrl(BASE_URL)
             .client(client)
             .build()
             .create(MoviesApi::class.java)

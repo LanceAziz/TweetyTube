@@ -1,7 +1,7 @@
 package com.example.tweetytube.features.movieList.presentation.viewModel
 
-import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.core.utils.Category
+import com.example.tweetytube.movie_list.data.repo.local.Movie
 
 data class MovieListState(
     val isLoadingPopular: Boolean = true,

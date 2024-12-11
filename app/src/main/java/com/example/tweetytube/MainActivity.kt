@@ -13,7 +13,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.tweetytube.core.navigation.NavigationComponent
-import com.example.tweetytube.features.search.presentation.viewModel.SearchViewModel
+import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.features.supplementary.bottomBar.BottomNavbar
 import com.example.tweetytube.features.supplementary.topBar.TopBar
 import com.example.tweetytube.ui.theme.AppTheme
@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 val navController = rememberNavController()
-                val searchViewModel: SearchViewModel = viewModel()
+                val searchViewModel: MovieListViewModel = viewModel()
                 Scaffold(
                     topBar = {
                         TopBar(

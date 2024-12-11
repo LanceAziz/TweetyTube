@@ -1,7 +1,7 @@
 package com.example.tweetytube.features.movieList.domain.repo
 
-import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.core.utils.Resource
+import com.example.tweetytube.movie_list.data.repo.local.Movie
 import kotlinx.coroutines.flow.Flow
 
 interface MovieListRepo {
