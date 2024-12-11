@@ -23,11 +23,16 @@ class MovieListViewModel @Inject constructor(
     private var _movieListState = MutableStateFlow(MovieListState())
     val movieListState = _movieListState.asStateFlow()
 
-    private val _searchText = mutableStateOf("")
-    val searchText get() = _searchText
+    private val _searchState = mutableStateOf(SearchState())
+    val searchText get() = _searchState.value.searchText
+    val filter get() = _searchState.value.filter
 
     fun setSearchText(value: String) {
-        _searchText.value = value
+        _searchState.value = _searchState.value.copy(searchText = value)
+    }
+
+    fun setFilter(value: String) {
+        _searchState.value = _searchState.value.copy(filter = value)
     }
 
 
