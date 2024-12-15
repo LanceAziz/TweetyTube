@@ -48,6 +48,7 @@ fun MicroCard(image: String, name: String, type: String) {
                 overflow = TextOverflow.Ellipsis,
                 color = MaterialTheme.colorScheme.outline,
                 textAlign = TextAlign.Center
+
             )
             Text(
                 text = type,
