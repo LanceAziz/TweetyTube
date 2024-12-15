@@ -1,7 +1,6 @@
 package com.example.tweetytube.features.supplementary.topBar
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -21,57 +20,78 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.tweetytube.R
+import com.example.tweetytube.core.utils.Category
 import com.example.tweetytube.core.utils.Screen
 import com.example.tweetytube.features.movieList.presentation.components.searchFilter.FilterChip
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.ui.theme.*
 
 @Composable
-fun TopBar(navController: NavHostController, searchViewModel: MovieListViewModel) {
+fun TopBar(
+    navController: NavHostController,
+    movieListViewModel: MovieListViewModel = hiltViewModel()
+) {
     val navBackStackEntry = navController.currentBackStackEntryAsState().value
     val currentDestination = navBackStackEntry?.destination
+
+    val searchState = movieListViewModel.searchState.collectAsStateWithLifecycle()
+    val categoriesWithMovies = listOf(
+        Triple("Trending", R.drawable.fire_solid, Category.POPULAR),
+        Triple("Upcoming", R.drawable.ticket_solid, Category.UPCOMING),
+        Triple("Top Rated", R.drawable.star_solid, Category.TOP_RATED),
+    )
+
     Column {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = 60.dp, start = 8.dp, end = 24.dp),
+                .padding(top = 50.dp, start = 8.dp, end = 24.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
                 painter = painterResource(id = R.drawable.logo_minimal),
                 contentDescription = "Tweety Tube Logo",
-                modifier = Modifier.size(70.dp)
-
+                modifier = Modifier
+                    .size(70.dp)
+                    .clickable(onClick = {
+                        navController.navigate(Screen.HomeScreen)
+                    },
+                        indication = null,
+                        interactionSource = remember { MutableInteractionSource() })
             )
             if (currentDestination?.route?.contains(
                     Screen.SearchScreen::class.simpleName ?: ""
                 ) == true
             ) {
                 OutlinedTextField(
-                    value = searchViewModel.searchText,
-                    onValueChange = { searchViewModel.setSearchText(it) },
+                    value = searchState.value.searchText,
+                    onValueChange = {
+                        movieListViewModel.setSearchText(it)
+                        movieListViewModel.reboundedSearch(it, movieListViewModel.filter)
+
+                    },
                     placeholder = { Text("Search...") },
                     singleLine = true,
                     maxLines = 1,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 10.dp)
-                        .border(
-                            width = 2.dp, color = outlineLight, shape = RoundedCornerShape(32.dp)
-                        ),
+                        .padding(horizontal = 10.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color.Transparent,
-                        unfocusedBorderColor = Color.Transparent,
-                    )
+                        focusedBorderColor = primaryLight,
+                        unfocusedBorderColor = outlineLight,
+                        cursorColor = secondaryLight,
+                    ),
+                    shape = RoundedCornerShape(32.dp)
                 )
             } else {
                 Box(modifier = Modifier.fillMaxWidth()) {
@@ -88,7 +108,8 @@ fun TopBar(navController: NavHostController, searchViewModel: MovieListViewModel
                         modifier = Modifier
                             .size(26.dp)
                             .clickable(onClick = {
-                                navController.navigate(Screen.SearchScreen)
+                                movieListViewModel.setSearchText("")
+                                navController.navigate(Screen.SearchScreen(null))
                             },
                                 indication = null,
                                 interactionSource = remember { MutableInteractionSource() })
@@ -100,16 +121,32 @@ fun TopBar(navController: NavHostController, searchViewModel: MovieListViewModel
                 }
             }
         }
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
+        if (currentDestination?.route?.contains(
+                Screen.SearchScreen::class.simpleName ?: ""
+            ) == true
         ) {
-            FilterChip(text = "Popular")
-            FilterChip(text = "Popular")
-            FilterChip(text = "Popular")
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 12.dp, horizontal = 8.dp),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                categoriesWithMovies.map { item ->
+                    val (categoryTitle, icon, category) = item
+                    FilterChip(
+                        text = categoryTitle,
+                        icon = icon,
+                        isSelected = movieListViewModel.filter == category,
+                        onClick = {
+                            movieListViewModel.setFilter(category)
+                            movieListViewModel.movieQuery(
+                                movieListViewModel.searchText,
+                                movieListViewModel.filter
+                            )
+                        })
+                }
+            }
         }
     }
 }

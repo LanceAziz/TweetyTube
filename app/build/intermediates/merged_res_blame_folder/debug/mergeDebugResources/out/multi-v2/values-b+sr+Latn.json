@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\ba00e5e4f09f56c19d5888b4b1f82239\\transformed\\ui-release\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,202,289,386,487,573,650,741,833,918,998,1083,1156,1233,1312,1389,1468,1538",
-                        "endColumns": "96,86,96,100,85,76,90,91,84,79,84,72,76,78,76,78,69,117",
-                        "endOffsets": "197,284,381,482,568,645,736,828,913,993,1078,1151,1228,1307,1384,1463,1533,1651"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12,13,14,15,73,74,75,76,77,78,79,80,82,83,84",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "831,928,1015,1112,1213,1299,1376,7748,7840,7925,8005,8090,8163,8240,8319,8497,8576,8646",
-                        "endColumns": "96,86,96,100,85,76,90,91,84,79,84,72,76,78,76,78,69,117",
-                        "endOffsets": "923,1010,1107,1208,1294,1371,1462,7835,7920,8000,8085,8158,8235,8314,8391,8571,8641,8759"
-                    }
-                },
-                {
                     "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\ebfaf92756ad220042daacdb1b52508d\\transformed\\core-1.15.0\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\6de2e55623d6b4c907945694ca875bb9\\transformed\\foundation-release\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\40a0eac85fccc57494c5d2241c94e19c\\transformed\\foundation-release\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "8764,8854",
                         "endColumns": "89,91",
                         "endOffsets": "8849,8941"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\c86a4d93685cc76f182b9712ce7ecb53\\transformed\\ui-release\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,202,289,386,487,573,650,741,833,918,998,1083,1156,1233,1312,1389,1468,1538",
+                        "endColumns": "96,86,96,100,85,76,90,91,84,79,84,72,76,78,76,78,69,117",
+                        "endOffsets": "197,284,381,482,568,645,736,828,913,993,1078,1151,1228,1307,1384,1463,1533,1651"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,73,74,75,76,77,78,79,80,82,83,84",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "831,928,1015,1112,1213,1299,1376,7748,7840,7925,8005,8090,8163,8240,8319,8497,8576,8646",
+                        "endColumns": "96,86,96,100,85,76,90,91,84,79,84,72,76,78,76,78,69,117",
+                        "endOffsets": "923,1010,1107,1208,1294,1371,1462,7835,7920,8000,8085,8158,8235,8314,8391,8571,8641,8759"
                     }
                 }
             ]

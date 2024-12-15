@@ -10,9 +10,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
 import com.example.tweetytube.core.navigation.NavigationComponent
+import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.features.supplementary.bottomBar.BottomNavbar
 import com.example.tweetytube.features.supplementary.topBar.TopBar
@@ -28,12 +30,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             AppTheme {
                 val navController = rememberNavController()
-                val searchViewModel: MovieListViewModel = viewModel()
+                val sharedMovieListViewModel = hiltViewModel<MovieListViewModel>()
+                val detailsViewModel = hiltViewModel<DetailsViewModel>()
                 Scaffold(
                     topBar = {
                         TopBar(
                             navController = navController,
-                            searchViewModel = searchViewModel
+                            movieListViewModel = sharedMovieListViewModel
                         )
                     },
                     bottomBar = { BottomNavbar(navController = navController) },
@@ -41,7 +44,9 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
                     NavigationComponent(
                         modifier = Modifier.padding(innerPadding),
-                        navController = navController
+                        navController = navController,
+                        sharedViewModel = sharedMovieListViewModel,
+                        detailsViewModel = detailsViewModel
                     )
                 }
             }

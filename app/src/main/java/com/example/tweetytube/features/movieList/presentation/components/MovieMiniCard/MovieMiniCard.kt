@@ -1,5 +1,6 @@
 package com.example.tweetytube.features.movieList.presentation.components.MovieMiniCard
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -34,12 +35,18 @@ import com.example.tweetytube.ui.theme.secondaryLight
 import kotlin.math.roundToInt
 
 @Composable
-fun MovieMIniCard(movieSearch:Movie){
+fun MovieMiniCard(movieSearch:Movie,
+                  goToDetails: (Int) -> Unit
+){
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(12.dp)
             .height(110.dp)
+            .clickable {
+                goToDetails(movieSearch.id)
+            }
+
     ) {
         AsyncImage(
             model = "${IMAGE_BASE_URL}${movieSearch.poster_path}",

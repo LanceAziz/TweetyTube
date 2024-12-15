@@ -1,5 +1,8 @@
 package com.example.tweetytube.features.movieList.presentation.components.moviesCollectionRow
 
+import android.util.Log
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -12,6 +15,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -21,7 +25,11 @@ import com.example.tweetytube.movie_list.data.repo.local.Movie
 import kotlin.math.absoluteValue
 
 @Composable
-fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
+fun MoviesCollectionRow(
+    rowTitle: String,
+    movies: List<Movie>,
+    goToDetails: (Int) -> Unit
+) {
     Column {
         val pagerState = rememberPagerState(pageCount = { movies.size })
         Text(
@@ -63,7 +71,11 @@ fun MoviesCollectionRow(rowTitle: String, movies: List<Movie>) {
                     start = if (isFirstCard) 0.dp else 16.dp,
                     end = if (isLastCard) 0.dp else 16.dp
                 )) {
-                MovieCard(movieSearch = movies[index])
+                MovieCard(movie = movies[index],
+                    modifier = Modifier.clickable{
+                        goToDetails(movies[index].id)
+                        Log.d("Movie Id", movies[index].id.toString())
+                    })
             }
         }
     }

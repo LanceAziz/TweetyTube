@@ -100,6 +100,7 @@ dimen splashscreen_icon_size_with_background
 drawable abc_vector_test
 drawable compat_splash_screen
 drawable compat_splash_screen_no_icon_background
+drawable fire_solid
 drawable heart_outline
 drawable heart_solid
 drawable house_solid
@@ -128,6 +129,10 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable search_solid
 drawable star_solid
+drawable ticket_solid
+drawable tweety_error_dark
+drawable tweety_error_light
+drawable tweety_search
 drawable tweety_splash_screen
 drawable user_solid
 font poppins_black

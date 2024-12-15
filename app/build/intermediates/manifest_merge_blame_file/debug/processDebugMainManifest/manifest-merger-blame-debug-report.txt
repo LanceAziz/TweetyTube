@@ -99,17 +99,17 @@
 58        </provider>
 59
 60        <activity
-60-->[androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\lance\.gradle\caches\8.9\transforms\56ba2e82fb62682a392031ec4c242994\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:23:9-25:39
+60-->[androidx.compose.ui:ui-test-manifest:1.7.6] C:\Users\lance\.gradle\caches\8.9\transforms\884f0075330ec996fba87022e138f16a\transformed\ui-test-manifest-1.7.6\AndroidManifest.xml:23:9-25:39
 61            android:name="androidx.activity.ComponentActivity"
-61-->[androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\lance\.gradle\caches\8.9\transforms\56ba2e82fb62682a392031ec4c242994\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:24:13-63
+61-->[androidx.compose.ui:ui-test-manifest:1.7.6] C:\Users\lance\.gradle\caches\8.9\transforms\884f0075330ec996fba87022e138f16a\transformed\ui-test-manifest-1.7.6\AndroidManifest.xml:24:13-63
 62            android:exported="true" />
-62-->[androidx.compose.ui:ui-test-manifest:1.7.5] C:\Users\lance\.gradle\caches\8.9\transforms\56ba2e82fb62682a392031ec4c242994\transformed\ui-test-manifest-1.7.5\AndroidManifest.xml:25:13-36
+62-->[androidx.compose.ui:ui-test-manifest:1.7.6] C:\Users\lance\.gradle\caches\8.9\transforms\884f0075330ec996fba87022e138f16a\transformed\ui-test-manifest-1.7.6\AndroidManifest.xml:25:13-36
 63        <activity
-63-->[androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\lance\.gradle\caches\8.9\transforms\e6991cf38d175d9276a4cd2161499edc\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
+63-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\lance\.gradle\caches\8.9\transforms\1ec78db52b5a78928847a35006709527\transformed\ui-tooling-release\AndroidManifest.xml:23:9-25:39
 64            android:name="androidx.compose.ui.tooling.PreviewActivity"
-64-->[androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\lance\.gradle\caches\8.9\transforms\e6991cf38d175d9276a4cd2161499edc\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
+64-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\lance\.gradle\caches\8.9\transforms\1ec78db52b5a78928847a35006709527\transformed\ui-tooling-release\AndroidManifest.xml:24:13-71
 65            android:exported="true" />
-65-->[androidx.compose.ui:ui-tooling-android:1.7.5] C:\Users\lance\.gradle\caches\8.9\transforms\e6991cf38d175d9276a4cd2161499edc\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
+65-->[androidx.compose.ui:ui-tooling-android:1.7.6] C:\Users\lance\.gradle\caches\8.9\transforms\1ec78db52b5a78928847a35006709527\transformed\ui-tooling-release\AndroidManifest.xml:25:13-36
 66
 67        <service
 67-->[androidx.room:room-runtime:2.6.1] C:\Users\lance\.gradle\caches\8.9\transforms\a4d2041dd8832e2430e7b610eac80282\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63

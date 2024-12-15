@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\ba00e5e4f09f56c19d5888b4b1f82239\\transformed\\ui-release\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\c86a4d93685cc76f182b9712ce7ecb53\\transformed\\ui-release\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\6de2e55623d6b4c907945694ca875bb9\\transformed\\foundation-release\\res\\values-mr\\values-mr.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\40a0eac85fccc57494c5d2241c94e19c\\transformed\\foundation-release\\res\\values-mr\\values-mr.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

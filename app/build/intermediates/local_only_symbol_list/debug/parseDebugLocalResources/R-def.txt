@@ -8,6 +8,7 @@ color purple_700
 color teal_200
 color teal_700
 color white
+drawable fire_solid
 drawable heart_outline
 drawable heart_solid
 drawable house_solid
@@ -16,6 +17,10 @@ drawable ic_launcher_foreground
 drawable logo_minimal
 drawable search_solid
 drawable star_solid
+drawable ticket_solid
+drawable tweety_error_dark
+drawable tweety_error_light
+drawable tweety_search
 drawable tweety_splash_screen
 drawable user_solid
 font poppins_black

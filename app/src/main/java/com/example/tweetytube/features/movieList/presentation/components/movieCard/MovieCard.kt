@@ -1,5 +1,6 @@
 package com.example.tweetytube.features.movieList.presentation.components.movieCard
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -33,11 +35,13 @@ import com.example.tweetytube.ui.theme.*
 import kotlin.math.roundToInt
 
 @Composable
-fun MovieCard(movieSearch: Movie) {
-    Column {
+fun MovieCard(movie: Movie,modifier: Modifier) {
+    Column(
+        modifier = modifier
+    ) {
         Box {
             AsyncImage(
-                model = "${IMAGE_BASE_URL}${movieSearch.poster_path}",
+                model = "${IMAGE_BASE_URL}${movie.poster_path}",
                 contentDescription = "Image with rounded corners",
                 modifier = Modifier
                     .height(450.dp)
@@ -68,7 +72,7 @@ fun MovieCard(movieSearch: Movie) {
                 .padding(start = 8.dp, top = 18.dp)
         ) {
             Text(
-                text = movieSearch.title,
+                text = movie.title,
                 fontWeight = FontWeight.Bold,
                 fontSize = 22.sp,
                 color = MaterialTheme.colorScheme.outline,
@@ -78,7 +82,7 @@ fun MovieCard(movieSearch: Movie) {
             )
             Row {
                 Text(
-                    text = ((movieSearch.vote_average * 10).roundToInt() / 10f).toString(),
+                    text = ((movie.vote_average * 10).roundToInt() / 10f).toString(),
                     fontSize = 14.sp,
                     color = primaryLight
                 )

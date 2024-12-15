@@ -4,23 +4,6 @@
             "outputFile": "com.example.tweetytube.app-mergeDebugResources-65:/values-fi/values-fi.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\ba00e5e4f09f56c19d5888b4b1f82239\\transformed\\ui-release\\res\\values-fi\\values-fi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,199,284,383,484,573,650,743,834,916,997,1079,1151,1227,1307,1381,1458,1530",
-                        "endColumns": "93,84,98,100,88,76,92,90,81,80,81,71,75,79,73,76,71,121",
-                        "endOffsets": "194,279,378,479,568,645,738,829,911,992,1074,1146,1222,1302,1376,1453,1525,1647"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12,13,14,15,73,74,75,76,77,78,79,80,82,83,84",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "839,933,1018,1117,1218,1307,1384,7738,7829,7911,7992,8074,8146,8222,8302,8477,8554,8626",
-                        "endColumns": "93,84,98,100,88,76,92,90,81,80,81,71,75,79,73,76,71,121",
-                        "endOffsets": "928,1013,1112,1213,1302,1379,1472,7824,7906,7987,8069,8141,8217,8297,8371,8549,8621,8743"
-                    }
-                },
-                {
                     "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\ebfaf92756ad220042daacdb1b52508d\\transformed\\core-1.15.0\\res\\values-fi\\values-fi.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
@@ -55,7 +38,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\6de2e55623d6b4c907945694ca875bb9\\transformed\\foundation-release\\res\\values-fi\\values-fi.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\c86a4d93685cc76f182b9712ce7ecb53\\transformed\\ui-release\\res\\values-fi\\values-fi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,199,284,383,484,573,650,743,834,916,997,1079,1151,1227,1307,1381,1458,1530",
+                        "endColumns": "93,84,98,100,88,76,92,90,81,80,81,71,75,79,73,76,71,121",
+                        "endOffsets": "194,279,378,479,568,645,738,829,911,992,1074,1146,1222,1302,1376,1453,1525,1647"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,73,74,75,76,77,78,79,80,82,83,84",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "839,933,1018,1117,1218,1307,1384,7738,7829,7911,7992,8074,8146,8222,8302,8477,8554,8626",
+                        "endColumns": "93,84,98,100,88,76,92,90,81,80,81,71,75,79,73,76,71,121",
+                        "endOffsets": "928,1013,1112,1213,1302,1379,1472,7824,7906,7987,8069,8141,8217,8297,8371,8549,8621,8743"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\40a0eac85fccc57494c5d2241c94e19c\\transformed\\foundation-release\\res\\values-fi\\values-fi.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

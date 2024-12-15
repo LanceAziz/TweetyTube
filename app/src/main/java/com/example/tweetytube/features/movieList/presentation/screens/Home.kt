@@ -13,8 +13,9 @@ import com.example.tweetytube.features.movieList.presentation.components.moviesC
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 
 @Composable
-fun Home() {
-    val movieListViewModel = hiltViewModel<MovieListViewModel>()
+fun Home(movieListViewModel: MovieListViewModel = hiltViewModel(),
+         goToDetails: (Int) -> Unit
+) {
     val movieListState = movieListViewModel.movieListState.collectAsState().value
 
     val categoriesWithMovies = listOf(
@@ -31,7 +32,8 @@ fun Home() {
             }
             MoviesCollectionRow(
                 rowTitle = categoryTitle,
-                movies = movieList
+                movies = movieList,
+                goToDetails = goToDetails
             )
         }
     }

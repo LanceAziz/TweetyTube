@@ -15,14 +15,15 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.tweetytube.core.utils.Screen.FavoriteScreen
-import com.example.tweetytube.core.utils.Screen.HomeScreen
-import com.example.tweetytube.core.utils.Screen.ProfileScreen
-import com.example.tweetytube.core.utils.Screen.SearchScreen
+import androidx.navigation.toRoute
+import com.example.tweetytube.core.utils.Screen.*
+import com.example.tweetytube.features.details.presentation.screens.Details
+import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.favorites.presentation.screens.Favorites
 import com.example.tweetytube.features.movieList.presentation.screens.Home
-import com.example.tweetytube.features.profile.presentation.screens.Profile
 import com.example.tweetytube.features.movieList.presentation.screens.Search
+import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
+import com.example.tweetytube.features.profile.presentation.screens.Profile
 
 data class AnimationTransitions(
     val enterTransition: () -> EnterTransition,
@@ -30,7 +31,12 @@ data class AnimationTransitions(
 )
 
 @Composable
-fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostController) {
+fun NavigationComponent(
+    modifier: Modifier = Modifier,
+    navController: NavHostController,
+    sharedViewModel: MovieListViewModel,
+    detailsViewModel: DetailsViewModel
+) {
     val animations = AnimationTransitions(
         enterTransition = {
             slideInHorizontally(initialOffsetX = { fullWidth -> -fullWidth }) + fadeIn()
@@ -45,7 +51,7 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
             .padding(16.dp)
             .clip(RoundedCornerShape(36.dp)),
         navController = navController,
-        startDestination = SearchScreen
+        startDestination = HomeScreen
     ) {
         composable<HomeScreen>(
             enterTransition = { animations.enterTransition() },
@@ -53,7 +59,12 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
             popEnterTransition = { animations.enterTransition() },
             popExitTransition = { animations.exitTransition() }
         ) {
-            Home()
+            Home(movieListViewModel = sharedViewModel,
+                goToDetails = { id ->
+                    navController.navigate(DetailsScreen(id))
+                }
+            )
+
         }
         composable<FavoriteScreen>(
             enterTransition = { animations.enterTransition() },
@@ -77,7 +88,21 @@ fun NavigationComponent(modifier: Modifier = Modifier, navController: NavHostCon
             popEnterTransition = { animations.enterTransition() },
             popExitTransition = { animations.exitTransition() }
         ) {
-            Search()
+            Search(movieListViewModel = sharedViewModel,
+                goToDetails = { id ->
+                    navController.navigate(DetailsScreen(id))
+                }
+            )
+        }
+        composable<DetailsScreen>(
+            enterTransition = { animations.enterTransition() },
+            exitTransition = { animations.exitTransition() },
+            popEnterTransition = { animations.enterTransition() },
+            popExitTransition = { animations.exitTransition() }
+        )
+        {
+            val details = requireNotNull(it.toRoute<DetailsScreen>())
+            Details(id = details.id, detailsViewModel = detailsViewModel)
         }
     }
 }

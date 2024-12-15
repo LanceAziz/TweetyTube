@@ -2,11 +2,12 @@ package com.example.tweetytube.features.supplementary.bottomBar;
 
 import androidx.annotation.DrawableRes;
 import androidx.compose.runtime.Composable;
+import androidx.compose.ui.Alignment;
 import androidx.compose.ui.Modifier;
 import androidx.navigation.NavHostController;
 import com.example.tweetytube.R;
-import com.example.tweetytube.ui.theme.*;
 import com.example.tweetytube.core.utils.Screen;
+import com.example.tweetytube.ui.theme.*;
 import com.exyte.animatednavbar.animation.balltrajectory.Parabolic;
 import com.exyte.animatednavbar.animation.indendshape.Height;
 

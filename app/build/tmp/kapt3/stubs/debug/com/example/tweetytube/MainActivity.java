@@ -3,6 +3,7 @@ package com.example.tweetytube;
 import android.os.Bundle;
 import androidx.activity.ComponentActivity;
 import androidx.compose.ui.Modifier;
+import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel;
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel;
 import dagger.hilt.android.AndroidEntryPoint;
 

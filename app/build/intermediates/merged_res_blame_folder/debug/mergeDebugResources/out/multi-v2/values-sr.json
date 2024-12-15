@@ -4,24 +4,7 @@
             "outputFile": "com.example.tweetytube.app-mergeDebugResources-65:/values-sr/values-sr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\6de2e55623d6b4c907945694ca875bb9\\transformed\\foundation-release\\res\\values-sr\\values-sr.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,143",
-                        "endColumns": "87,89",
-                        "endOffsets": "138,228"
-                    },
-                    "to": {
-                        "startLines": "85,86",
-                        "startColumns": "4,4",
-                        "startOffsets": "8750,8838",
-                        "endColumns": "87,89",
-                        "endOffsets": "8833,8923"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\ba00e5e4f09f56c19d5888b4b1f82239\\transformed\\ui-release\\res\\values-sr\\values-sr.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\c86a4d93685cc76f182b9712ce7ecb53\\transformed\\ui-release\\res\\values-sr\\values-sr.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,6 +18,23 @@
                         "startOffsets": "831,928,1015,1112,1213,1299,1376,7736,7828,7913,7993,8078,8151,8228,8306,8483,8562,8632",
                         "endColumns": "96,86,96,100,85,76,90,91,84,79,84,72,76,77,75,78,69,117",
                         "endOffsets": "923,1010,1107,1208,1294,1371,1462,7823,7908,7988,8073,8146,8223,8301,8377,8557,8627,8745"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\40a0eac85fccc57494c5d2241c94e19c\\transformed\\foundation-release\\res\\values-sr\\values-sr.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,143",
+                        "endColumns": "87,89",
+                        "endOffsets": "138,228"
+                    },
+                    "to": {
+                        "startLines": "85,86",
+                        "startColumns": "4,4",
+                        "startOffsets": "8750,8838",
+                        "endColumns": "87,89",
+                        "endOffsets": "8833,8923"
                     }
                 },
                 {
