@@ -1,0 +1,38 @@
+com.example.tweetytube.test.app-annotation-experimental-1.4.1-0 C:\Users\lance\.gradle\caches\8.9\transforms\02caa342f426d6bb1ea67f930109f93d\transformed\annotation-experimental-1.4.1\res
+com.example.tweetytube.test.app-activity-compose-1.9.3-1 C:\Users\lance\.gradle\caches\8.9\transforms\0554ebbf1ea1fc82e0ca481c05fd61a7\transformed\activity-compose-1.9.3\res
+com.example.tweetytube.test.app-lifecycle-viewmodel-ktx-2.8.7-2 C:\Users\lance\.gradle\caches\8.9\transforms\0d6f4f8f4bcca2451044fdc388e89ab5\transformed\lifecycle-viewmodel-ktx-2.8.7\res
+com.example.tweetytube.test.app-lifecycle-runtime-ktx-release-3 C:\Users\lance\.gradle\caches\8.9\transforms\0d80421f800552088ef9059411530268\transformed\lifecycle-runtime-ktx-release\res
+com.example.tweetytube.test.app-lifecycle-runtime-release-4 C:\Users\lance\.gradle\caches\8.9\transforms\101d5b9b8525b1be6c53f05008b59365\transformed\lifecycle-runtime-release\res
+com.example.tweetytube.test.app-lifecycle-viewmodel-release-5 C:\Users\lance\.gradle\caches\8.9\transforms\1e8a11bfbe8233d86983feafa94a1768\transformed\lifecycle-viewmodel-release\res
+com.example.tweetytube.test.app-ui-test-release-6 C:\Users\lance\.gradle\caches\8.9\transforms\2648eef23fc292b2f7ce7ec307c0b86d\transformed\ui-test-release\res
+com.example.tweetytube.test.app-ui-geometry-release-7 C:\Users\lance\.gradle\caches\8.9\transforms\30a468c49c4887cded137fe310ae69d1\transformed\ui-geometry-release\res
+com.example.tweetytube.test.app-lifecycle-viewmodel-savedstate-2.8.7-8 C:\Users\lance\.gradle\caches\8.9\transforms\35ca3d2d959c1bb7c8be083aaa0899da\transformed\lifecycle-viewmodel-savedstate-2.8.7\res
+com.example.tweetytube.test.app-runtime-saveable-release-9 C:\Users\lance\.gradle\caches\8.9\transforms\3fc837c177b38eff9686865bede6b189\transformed\runtime-saveable-release\res
+com.example.tweetytube.test.app-startup-runtime-1.1.1-10 C:\Users\lance\.gradle\caches\8.9\transforms\4a41d5541890e46a6b5c0cf87600301f\transformed\startup-runtime-1.1.1\res
+com.example.tweetytube.test.app-ui-unit-release-11 C:\Users\lance\.gradle\caches\8.9\transforms\5495c39a0066729fb7c192910f397a29\transformed\ui-unit-release\res
+com.example.tweetytube.test.app-lifecycle-livedata-core-2.8.7-12 C:\Users\lance\.gradle\caches\8.9\transforms\54d83aab8c7407d00f99b114b20ee45f\transformed\lifecycle-livedata-core-2.8.7\res
+com.example.tweetytube.test.app-runtime-release-13 C:\Users\lance\.gradle\caches\8.9\transforms\58a97577ed03b482f31b357409f82b80\transformed\runtime-release\res
+com.example.tweetytube.test.app-activity-1.9.3-14 C:\Users\lance\.gradle\caches\8.9\transforms\6916ff22da894721f193f8d7a33590a4\transformed\activity-1.9.3\res
+com.example.tweetytube.test.app-lifecycle-process-2.8.7-15 C:\Users\lance\.gradle\caches\8.9\transforms\6d4db70f622548e482b20033db4c552c\transformed\lifecycle-process-2.8.7\res
+com.example.tweetytube.test.app-core-runtime-2.2.0-16 C:\Users\lance\.gradle\caches\8.9\transforms\7a0f5e410cbffe3bffd51875933cddf9\transformed\core-runtime-2.2.0\res
+com.example.tweetytube.test.app-emoji2-1.3.0-17 C:\Users\lance\.gradle\caches\8.9\transforms\96d364d984c3cdbd2f89265327d63f38\transformed\emoji2-1.3.0\res
+com.example.tweetytube.test.app-ui-graphics-release-18 C:\Users\lance\.gradle\caches\8.9\transforms\9b3d85864bc818e72936a40e7e9ac382\transformed\ui-graphics-release\res
+com.example.tweetytube.test.app-savedstate-ktx-1.2.1-19 C:\Users\lance\.gradle\caches\8.9\transforms\9edc117f77d8788da80e6a15ad6ef48b\transformed\savedstate-ktx-1.2.1\res
+com.example.tweetytube.test.app-savedstate-1.2.1-20 C:\Users\lance\.gradle\caches\8.9\transforms\b17fa9748378445b477353d79759884f\transformed\savedstate-1.2.1\res
+com.example.tweetytube.test.app-ui-test-junit4-release-21 C:\Users\lance\.gradle\caches\8.9\transforms\b61ad1b0e85f82e85716cc74bdd7836a\transformed\ui-test-junit4-release\res
+com.example.tweetytube.test.app-graphics-path-1.0.1-22 C:\Users\lance\.gradle\caches\8.9\transforms\b853b32f34d572d5df184fa129d8f46b\transformed\graphics-path-1.0.1\res
+com.example.tweetytube.test.app-profileinstaller-1.3.1-23 C:\Users\lance\.gradle\caches\8.9\transforms\bcfc6d24b3290623debe1217b6a32064\transformed\profileinstaller-1.3.1\res
+com.example.tweetytube.test.app-core-ktx-1.15.0-24 C:\Users\lance\.gradle\caches\8.9\transforms\c03fe8f65e130c3fc7e4163f14122b8c\transformed\core-ktx-1.15.0\res
+com.example.tweetytube.test.app-core-1.6.1-25 C:\Users\lance\.gradle\caches\8.9\transforms\c3a83435c6903a7134b692729d8cb0d0\transformed\core-1.6.1\res
+com.example.tweetytube.test.app-ui-util-release-26 C:\Users\lance\.gradle\caches\8.9\transforms\c69fbb7f165988dbbc55fd013c08c67e\transformed\ui-util-release\res
+com.example.tweetytube.test.app-ui-release-27 C:\Users\lance\.gradle\caches\8.9\transforms\c86a4d93685cc76f182b9712ce7ecb53\transformed\ui-release\res
+com.example.tweetytube.test.app-customview-poolingcontainer-1.0.0-28 C:\Users\lance\.gradle\caches\8.9\transforms\e4adc8edda8e534d8c09312964e1e655\transformed\customview-poolingcontainer-1.0.0\res
+com.example.tweetytube.test.app-ui-text-release-29 C:\Users\lance\.gradle\caches\8.9\transforms\e51d0011f894ebd486a1bf4829b10296\transformed\ui-text-release\res
+com.example.tweetytube.test.app-core-1.15.0-30 C:\Users\lance\.gradle\caches\8.9\transforms\ebfaf92756ad220042daacdb1b52508d\transformed\core-1.15.0\res
+com.example.tweetytube.test.app-activity-ktx-1.9.3-31 C:\Users\lance\.gradle\caches\8.9\transforms\ee92fe534bf87928095f677a6e887fbd\transformed\activity-ktx-1.9.3\res
+com.example.tweetytube.test.app-tracing-1.2.0-32 C:\Users\lance\.gradle\caches\8.9\transforms\f5add0b336c3743dc6c882814eb332b1\transformed\tracing-1.2.0\res
+com.example.tweetytube.test.app-lifecycle-runtime-compose-release-33 C:\Users\lance\.gradle\caches\8.9\transforms\fb3699b8959daa8414621748ff533228\transformed\lifecycle-runtime-compose-release\res
+com.example.tweetytube.test.app-androidTest-34 C:\Users\lance\OneDrive\Desktop\Atos Project\TweetyTube\app\build\generated\res\resValues\androidTest\debug
+com.example.tweetytube.test.app-mergeDebugAndroidTestResources-35 C:\Users\lance\OneDrive\Desktop\Atos Project\TweetyTube\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.tweetytube.test.app-mergeDebugAndroidTestResources-36 C:\Users\lance\OneDrive\Desktop\Atos Project\TweetyTube\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.tweetytube.test.app-debugAndroidTest-37 C:\Users\lance\OneDrive\Desktop\Atos Project\TweetyTube\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
