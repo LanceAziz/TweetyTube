@@ -49,7 +49,6 @@ fun TopBar(
         Triple("Upcoming", R.drawable.ticket_solid, Category.UPCOMING),
         Triple("Top Rated", R.drawable.star_solid, Category.TOP_RATED),
     )
-
     Column {
         Row(
             modifier = Modifier
