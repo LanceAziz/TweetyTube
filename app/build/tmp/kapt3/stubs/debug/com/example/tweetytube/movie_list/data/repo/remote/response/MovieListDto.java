@@ -8,28 +8,6 @@ public final class MovieListDto {
     private final int total_pages = 0;
     private final int total_results = 0;
     
-    public MovieListDto(int page, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.movie_list.data.repo.remote.response.MovieDto> results, int total_pages, int total_results) {
-        super();
-    }
-    
-    public final int getPage() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.movie_list.data.repo.remote.response.MovieDto> getResults() {
-        return null;
-    }
-    
-    public final int getTotal_pages() {
-        return 0;
-    }
-    
-    public final int getTotal_results() {
-        return 0;
-    }
-    
     public final int component1() {
         return 0;
     }
@@ -68,5 +46,27 @@ public final class MovieListDto {
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
         return null;
+    }
+    
+    public MovieListDto(int page, @org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.movie_list.data.repo.remote.response.MovieDto> results, int total_pages, int total_results) {
+        super();
+    }
+    
+    public final int getPage() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.movie_list.data.repo.remote.response.MovieDto> getResults() {
+        return null;
+    }
+    
+    public final int getTotal_pages() {
+        return 0;
+    }
+    
+    public final int getTotal_results() {
+        return 0;
     }
 }

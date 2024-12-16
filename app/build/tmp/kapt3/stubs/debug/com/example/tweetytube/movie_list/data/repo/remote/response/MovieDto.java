@@ -31,94 +31,6 @@ public final class MovieDto {
     @org.jetbrains.annotations.Nullable()
     private final java.lang.Integer vote_count = null;
     
-    public MovieDto(@org.jetbrains.annotations.Nullable()
-    java.lang.Boolean adult, @org.jetbrains.annotations.Nullable()
-    java.lang.String backdrop_path, @org.jetbrains.annotations.Nullable()
-    java.util.List<java.lang.Integer> genre_ids, @org.jetbrains.annotations.Nullable()
-    java.lang.Integer id, @org.jetbrains.annotations.Nullable()
-    java.lang.String original_language, @org.jetbrains.annotations.Nullable()
-    java.lang.String original_title, @org.jetbrains.annotations.Nullable()
-    java.lang.String overview, @org.jetbrains.annotations.Nullable()
-    java.lang.Double popularity, @org.jetbrains.annotations.Nullable()
-    java.lang.String poster_path, @org.jetbrains.annotations.Nullable()
-    java.lang.String release_date, @org.jetbrains.annotations.Nullable()
-    java.lang.String title, @org.jetbrains.annotations.Nullable()
-    java.lang.Boolean video, @org.jetbrains.annotations.Nullable()
-    java.lang.Double vote_average, @org.jetbrains.annotations.Nullable()
-    java.lang.Integer vote_count) {
-        super();
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Boolean getAdult() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getBackdrop_path() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.util.List<java.lang.Integer> getGenre_ids() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Integer getId() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getOriginal_language() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getOriginal_title() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getOverview() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Double getPopularity() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getPoster_path() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getRelease_date() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.String getTitle() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Boolean getVideo() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Double getVote_average() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.Nullable()
-    public final java.lang.Integer getVote_count() {
-        return null;
-    }
-    
     @org.jetbrains.annotations.Nullable()
     public final java.lang.Boolean component1() {
         return null;
@@ -222,6 +134,94 @@ public final class MovieDto {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public MovieDto(@org.jetbrains.annotations.Nullable()
+    java.lang.Boolean adult, @org.jetbrains.annotations.Nullable()
+    java.lang.String backdrop_path, @org.jetbrains.annotations.Nullable()
+    java.util.List<java.lang.Integer> genre_ids, @org.jetbrains.annotations.Nullable()
+    java.lang.Integer id, @org.jetbrains.annotations.Nullable()
+    java.lang.String original_language, @org.jetbrains.annotations.Nullable()
+    java.lang.String original_title, @org.jetbrains.annotations.Nullable()
+    java.lang.String overview, @org.jetbrains.annotations.Nullable()
+    java.lang.Double popularity, @org.jetbrains.annotations.Nullable()
+    java.lang.String poster_path, @org.jetbrains.annotations.Nullable()
+    java.lang.String release_date, @org.jetbrains.annotations.Nullable()
+    java.lang.String title, @org.jetbrains.annotations.Nullable()
+    java.lang.Boolean video, @org.jetbrains.annotations.Nullable()
+    java.lang.Double vote_average, @org.jetbrains.annotations.Nullable()
+    java.lang.Integer vote_count) {
+        super();
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Boolean getAdult() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getBackdrop_path() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.util.List<java.lang.Integer> getGenre_ids() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Integer getId() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getOriginal_language() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getOriginal_title() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getOverview() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Double getPopularity() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getPoster_path() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getRelease_date() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.String getTitle() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Boolean getVideo() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Double getVote_average() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.Nullable()
+    public final java.lang.Integer getVote_count() {
         return null;
     }
 }

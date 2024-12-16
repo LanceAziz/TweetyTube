@@ -21,70 +21,6 @@ public final class CastDto {
     @org.jetbrains.annotations.NotNull()
     private final java.lang.String profile_path = null;
     
-    public CastDto(boolean adult, int cast_id, @org.jetbrains.annotations.NotNull()
-    java.lang.String character, @org.jetbrains.annotations.NotNull()
-    java.lang.String credit_id, int gender, int id, @org.jetbrains.annotations.NotNull()
-    java.lang.String known_for_department, @org.jetbrains.annotations.NotNull()
-    java.lang.String name, int order, @org.jetbrains.annotations.NotNull()
-    java.lang.String original_name, double popularity, @org.jetbrains.annotations.NotNull()
-    java.lang.String profile_path) {
-        super();
-    }
-    
-    public final boolean getAdult() {
-        return false;
-    }
-    
-    public final int getCast_id() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCharacter() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCredit_id() {
-        return null;
-    }
-    
-    public final int getGender() {
-        return 0;
-    }
-    
-    public final int getId() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getKnown_for_department() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getName() {
-        return null;
-    }
-    
-    public final int getOrder() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getOriginal_name() {
-        return null;
-    }
-    
-    public final double getPopularity() {
-        return 0.0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getProfile_path() {
-        return null;
-    }
-    
     public final boolean component1() {
         return false;
     }
@@ -164,6 +100,70 @@ public final class CastDto {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public CastDto(boolean adult, int cast_id, @org.jetbrains.annotations.NotNull()
+    java.lang.String character, @org.jetbrains.annotations.NotNull()
+    java.lang.String credit_id, int gender, int id, @org.jetbrains.annotations.NotNull()
+    java.lang.String known_for_department, @org.jetbrains.annotations.NotNull()
+    java.lang.String name, int order, @org.jetbrains.annotations.NotNull()
+    java.lang.String original_name, double popularity, @org.jetbrains.annotations.NotNull()
+    java.lang.String profile_path) {
+        super();
+    }
+    
+    public final boolean getAdult() {
+        return false;
+    }
+    
+    public final int getCast_id() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCharacter() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCredit_id() {
+        return null;
+    }
+    
+    public final int getGender() {
+        return 0;
+    }
+    
+    public final int getId() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getKnown_for_department() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getName() {
+        return null;
+    }
+    
+    public final int getOrder() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getOriginal_name() {
+        return null;
+    }
+    
+    public final double getPopularity() {
+        return 0.0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getProfile_path() {
         return null;
     }
 }

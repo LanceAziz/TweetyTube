@@ -11,10 +11,6 @@ public final class ColorFamily {
     private final long colorContainer = 0L;
     private final long onColorContainer = 0L;
     
-    private ColorFamily(long color, long onColor, long colorContainer, long onColorContainer) {
-        super();
-    }
-    
     @java.lang.Override()
     public boolean equals(@org.jetbrains.annotations.Nullable()
     java.lang.Object other) {
@@ -30,5 +26,9 @@ public final class ColorFamily {
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
         return null;
+    }
+    
+    private ColorFamily(long color, long onColor, long colorContainer, long onColorContainer) {
+        super();
     }
 }

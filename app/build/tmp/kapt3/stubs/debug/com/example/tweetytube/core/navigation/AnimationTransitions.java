@@ -15,22 +15,6 @@ public final class AnimationTransitions {
     @org.jetbrains.annotations.NotNull()
     private final kotlin.jvm.functions.Function0<androidx.compose.animation.ExitTransition> exitTransition = null;
     
-    public AnimationTransitions(@org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function0<? extends androidx.compose.animation.EnterTransition> enterTransition, @org.jetbrains.annotations.NotNull()
-    kotlin.jvm.functions.Function0<? extends androidx.compose.animation.ExitTransition> exitTransition) {
-        super();
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final kotlin.jvm.functions.Function0<androidx.compose.animation.EnterTransition> getEnterTransition() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final kotlin.jvm.functions.Function0<androidx.compose.animation.ExitTransition> getExitTransition() {
-        return null;
-    }
-    
     @org.jetbrains.annotations.NotNull()
     public final kotlin.jvm.functions.Function0<androidx.compose.animation.EnterTransition> component1() {
         return null;
@@ -62,6 +46,22 @@ public final class AnimationTransitions {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public AnimationTransitions(@org.jetbrains.annotations.NotNull()
+    kotlin.jvm.functions.Function0<? extends androidx.compose.animation.EnterTransition> enterTransition, @org.jetbrains.annotations.NotNull()
+    kotlin.jvm.functions.Function0<? extends androidx.compose.animation.ExitTransition> exitTransition) {
+        super();
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final kotlin.jvm.functions.Function0<androidx.compose.animation.EnterTransition> getEnterTransition() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final kotlin.jvm.functions.Function0<androidx.compose.animation.ExitTransition> getExitTransition() {
         return null;
     }
 }

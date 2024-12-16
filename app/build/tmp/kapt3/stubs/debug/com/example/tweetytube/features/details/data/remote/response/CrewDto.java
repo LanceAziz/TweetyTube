@@ -21,68 +21,6 @@ public final class CrewDto {
     @org.jetbrains.annotations.NotNull()
     private final java.lang.String profile_path = null;
     
-    public CrewDto(boolean adult, @org.jetbrains.annotations.NotNull()
-    java.lang.String credit_id, @org.jetbrains.annotations.NotNull()
-    java.lang.String department, int gender, int id, @org.jetbrains.annotations.NotNull()
-    java.lang.String job, @org.jetbrains.annotations.NotNull()
-    java.lang.String known_for_department, @org.jetbrains.annotations.NotNull()
-    java.lang.String name, @org.jetbrains.annotations.NotNull()
-    java.lang.String original_name, double popularity, @org.jetbrains.annotations.NotNull()
-    java.lang.String profile_path) {
-        super();
-    }
-    
-    public final boolean getAdult() {
-        return false;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCredit_id() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getDepartment() {
-        return null;
-    }
-    
-    public final int getGender() {
-        return 0;
-    }
-    
-    public final int getId() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getJob() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getKnown_for_department() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getName() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getOriginal_name() {
-        return null;
-    }
-    
-    public final double getPopularity() {
-        return 0.0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getProfile_path() {
-        return null;
-    }
-    
     public final boolean component1() {
         return false;
     }
@@ -160,6 +98,68 @@ public final class CrewDto {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public CrewDto(boolean adult, @org.jetbrains.annotations.NotNull()
+    java.lang.String credit_id, @org.jetbrains.annotations.NotNull()
+    java.lang.String department, int gender, int id, @org.jetbrains.annotations.NotNull()
+    java.lang.String job, @org.jetbrains.annotations.NotNull()
+    java.lang.String known_for_department, @org.jetbrains.annotations.NotNull()
+    java.lang.String name, @org.jetbrains.annotations.NotNull()
+    java.lang.String original_name, double popularity, @org.jetbrains.annotations.NotNull()
+    java.lang.String profile_path) {
+        super();
+    }
+    
+    public final boolean getAdult() {
+        return false;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCredit_id() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getDepartment() {
+        return null;
+    }
+    
+    public final int getGender() {
+        return 0;
+    }
+    
+    public final int getId() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getJob() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getKnown_for_department() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getName() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getOriginal_name() {
+        return null;
+    }
+    
+    public final double getPopularity() {
+        return 0.0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getProfile_path() {
         return null;
     }
 }

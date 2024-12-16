@@ -16,11 +16,15 @@ import com.example.tweetytube.features.details.data.repo.CreditsRepoImp;
 import com.example.tweetytube.features.details.domain.repo.CreditsRepo;
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel;
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel_HiltModules;
+import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel_HiltModules_BindsModule_Binds_LazyMapKey;
+import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel_HiltModules_KeyModule_Provide_LazyMapKey;
 import com.example.tweetytube.features.movieList.data.remote.MoviesApi;
 import com.example.tweetytube.features.movieList.data.repo.MovieListRepoImp;
 import com.example.tweetytube.features.movieList.domain.repo.MovieListRepo;
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel;
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel_HiltModules;
+import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel_HiltModules_BindsModule_Binds_LazyMapKey;
+import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel_HiltModules_KeyModule_Provide_LazyMapKey;
 import com.example.tweetytube.movie_list.data.repo.local.MovieDatabase;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.ViewModelLifecycle;
@@ -39,8 +43,6 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideApplicationFactory;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
-import dagger.internal.IdentifierNameString;
-import dagger.internal.KeepFieldType;
 import dagger.internal.LazyClassKeyMap;
 import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
@@ -60,7 +62,9 @@ import javax.annotation.processing.Generated;
     "rawtypes",
     "KotlinInternal",
     "KotlinInternalInJava",
-    "cast"
+    "cast",
+    "deprecation",
+    "nullness:initialization.field.uninitialized"
 })
 public final class DaggerApp_HiltComponents_SingletonC {
   private DaggerApp_HiltComponents_SingletonC() {
@@ -382,7 +386,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, Boolean> getViewModelKeys() {
-      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(2).put(LazyClassKeyProvider.com_example_tweetytube_features_details_presentation_viewModel_DetailsViewModel, DetailsViewModel_HiltModules.KeyModule.provide()).put(LazyClassKeyProvider.com_example_tweetytube_features_movieList_presentation_viewModel_MovieListViewModel, MovieListViewModel_HiltModules.KeyModule.provide()).build());
+      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(2).put(DetailsViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, DetailsViewModel_HiltModules.KeyModule.provide()).put(MovieListViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, MovieListViewModel_HiltModules.KeyModule.provide()).build());
     }
 
     @Override
@@ -398,19 +402,6 @@ public final class DaggerApp_HiltComponents_SingletonC {
     @Override
     public ViewComponentBuilder viewComponentBuilder() {
       return new ViewCBuilder(singletonCImpl, activityRetainedCImpl, activityCImpl);
-    }
-
-    @IdentifierNameString
-    private static final class LazyClassKeyProvider {
-      static String com_example_tweetytube_features_details_presentation_viewModel_DetailsViewModel = "com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel";
-
-      static String com_example_tweetytube_features_movieList_presentation_viewModel_MovieListViewModel = "com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel";
-
-      @KeepFieldType
-      DetailsViewModel com_example_tweetytube_features_details_presentation_viewModel_DetailsViewModel2;
-
-      @KeepFieldType
-      MovieListViewModel com_example_tweetytube_features_movieList_presentation_viewModel_MovieListViewModel2;
     }
   }
 
@@ -444,25 +435,12 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
-      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(2).put(LazyClassKeyProvider.com_example_tweetytube_features_details_presentation_viewModel_DetailsViewModel, ((Provider) detailsViewModelProvider)).put(LazyClassKeyProvider.com_example_tweetytube_features_movieList_presentation_viewModel_MovieListViewModel, ((Provider) movieListViewModelProvider)).build());
+      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(2).put(DetailsViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) detailsViewModelProvider)).put(MovieListViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) movieListViewModelProvider)).build());
     }
 
     @Override
     public Map<Class<?>, Object> getHiltViewModelAssistedMap() {
       return Collections.<Class<?>, Object>emptyMap();
-    }
-
-    @IdentifierNameString
-    private static final class LazyClassKeyProvider {
-      static String com_example_tweetytube_features_details_presentation_viewModel_DetailsViewModel = "com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel";
-
-      static String com_example_tweetytube_features_movieList_presentation_viewModel_MovieListViewModel = "com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel";
-
-      @KeepFieldType
-      DetailsViewModel com_example_tweetytube_features_details_presentation_viewModel_DetailsViewModel2;
-
-      @KeepFieldType
-      MovieListViewModel com_example_tweetytube_features_movieList_presentation_viewModel_MovieListViewModel2;
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {

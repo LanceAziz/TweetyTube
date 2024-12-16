@@ -32,88 +32,6 @@ public final class MovieEntity {
     @org.jetbrains.annotations.NotNull()
     private final java.lang.String category = null;
     
-    public MovieEntity(boolean adult, @org.jetbrains.annotations.NotNull()
-    java.lang.String backdrop_path, @org.jetbrains.annotations.NotNull()
-    java.lang.String genre_ids, @org.jetbrains.annotations.NotNull()
-    java.lang.String original_language, @org.jetbrains.annotations.NotNull()
-    java.lang.String original_title, @org.jetbrains.annotations.NotNull()
-    java.lang.String overview, double popularity, @org.jetbrains.annotations.NotNull()
-    java.lang.String poster_path, @org.jetbrains.annotations.NotNull()
-    java.lang.String release_date, @org.jetbrains.annotations.NotNull()
-    java.lang.String title, boolean video, double vote_average, int vote_count, int id, @org.jetbrains.annotations.NotNull()
-    java.lang.String category) {
-        super();
-    }
-    
-    public final boolean getAdult() {
-        return false;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getBackdrop_path() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getGenre_ids() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getOriginal_language() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getOriginal_title() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getOverview() {
-        return null;
-    }
-    
-    public final double getPopularity() {
-        return 0.0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getPoster_path() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getRelease_date() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getTitle() {
-        return null;
-    }
-    
-    public final boolean getVideo() {
-        return false;
-    }
-    
-    public final double getVote_average() {
-        return 0.0;
-    }
-    
-    public final int getVote_count() {
-        return 0;
-    }
-    
-    public final int getId() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCategory() {
-        return null;
-    }
-    
     public final boolean component1() {
         return false;
     }
@@ -211,6 +129,88 @@ public final class MovieEntity {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public MovieEntity(boolean adult, @org.jetbrains.annotations.NotNull()
+    java.lang.String backdrop_path, @org.jetbrains.annotations.NotNull()
+    java.lang.String genre_ids, @org.jetbrains.annotations.NotNull()
+    java.lang.String original_language, @org.jetbrains.annotations.NotNull()
+    java.lang.String original_title, @org.jetbrains.annotations.NotNull()
+    java.lang.String overview, double popularity, @org.jetbrains.annotations.NotNull()
+    java.lang.String poster_path, @org.jetbrains.annotations.NotNull()
+    java.lang.String release_date, @org.jetbrains.annotations.NotNull()
+    java.lang.String title, boolean video, double vote_average, int vote_count, int id, @org.jetbrains.annotations.NotNull()
+    java.lang.String category) {
+        super();
+    }
+    
+    public final boolean getAdult() {
+        return false;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getBackdrop_path() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getGenre_ids() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getOriginal_language() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getOriginal_title() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getOverview() {
+        return null;
+    }
+    
+    public final double getPopularity() {
+        return 0.0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getPoster_path() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getRelease_date() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getTitle() {
+        return null;
+    }
+    
+    public final boolean getVideo() {
+        return false;
+    }
+    
+    public final double getVote_average() {
+        return 0.0;
+    }
+    
+    public final int getVote_count() {
+        return 0;
+    }
+    
+    public final int getId() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCategory() {
         return null;
     }
 }

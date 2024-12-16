@@ -12,32 +12,6 @@ public final class SearchState {
     @org.jetbrains.annotations.NotNull()
     private final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> searchResult = null;
     
-    public SearchState(@org.jetbrains.annotations.NotNull()
-    java.lang.String searchText, @org.jetbrains.annotations.NotNull()
-    java.lang.String filter, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> searchResult) {
-        super();
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getSearchText() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getFilter() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getSearchResult() {
-        return null;
-    }
-    
-    public SearchState() {
-        super();
-    }
-    
     @org.jetbrains.annotations.NotNull()
     public final java.lang.String component1() {
         return null;
@@ -76,5 +50,31 @@ public final class SearchState {
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
         return null;
+    }
+    
+    public SearchState(@org.jetbrains.annotations.NotNull()
+    java.lang.String searchText, @org.jetbrains.annotations.NotNull()
+    java.lang.String filter, @org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> searchResult) {
+        super();
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getSearchText() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getFilter() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getSearchResult() {
+        return null;
+    }
+    
+    public SearchState() {
+        super();
     }
 }

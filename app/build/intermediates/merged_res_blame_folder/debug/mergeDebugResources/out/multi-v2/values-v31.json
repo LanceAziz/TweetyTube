@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tweetytube.app-mergeDebugResources-68:/values-v31/values-v31.xml",
+            "outputFile": "com.example.tweetytube.app-mergeDebugResources-67:/values-v31/values-v31.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\85b3e2fd79dcc1b2a9356d2a34c4dcdf\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
+                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\5e47717a5750c0fa2ea8250769797bc8\\transformed\\core-splashscreen-1.0.1\\res\\values-v31\\values-v31.xml",
                     "from": {
                         "startLines": "2,9",
                         "startColumns": "4,4",

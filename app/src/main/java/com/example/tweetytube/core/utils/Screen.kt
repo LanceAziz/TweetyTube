@@ -17,4 +17,8 @@ sealed class Screen {
 
     @Serializable
     data class SearchScreen(val id: Int?) : Screen()
+
+    @Serializable
+    object LoginScreen : Screen()
+
 }

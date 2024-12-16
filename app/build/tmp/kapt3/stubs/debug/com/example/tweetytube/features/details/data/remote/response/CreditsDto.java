@@ -12,26 +12,6 @@ public final class CreditsDto {
     private final java.util.List<com.example.tweetytube.features.details.data.remote.response.CrewDto> crewDto = null;
     private final int id = 0;
     
-    public CreditsDto(@org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.features.details.data.remote.response.CastDto> castDto, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.features.details.data.remote.response.CrewDto> crewDto, int id) {
-        super();
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.features.details.data.remote.response.CastDto> getCastDto() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.features.details.data.remote.response.CrewDto> getCrewDto() {
-        return null;
-    }
-    
-    public final int getId() {
-        return 0;
-    }
-    
     @org.jetbrains.annotations.NotNull()
     public final java.util.List<com.example.tweetytube.features.details.data.remote.response.CastDto> component1() {
         return null;
@@ -68,5 +48,25 @@ public final class CreditsDto {
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
         return null;
+    }
+    
+    public CreditsDto(@org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.features.details.data.remote.response.CastDto> castDto, @org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.features.details.data.remote.response.CrewDto> crewDto, int id) {
+        super();
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.features.details.data.remote.response.CastDto> getCastDto() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.features.details.data.remote.response.CrewDto> getCrewDto() {
+        return null;
+    }
+    
+    public final int getId() {
+        return 0;
     }
 }

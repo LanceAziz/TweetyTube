@@ -8,16 +8,6 @@ public abstract interface MovieListUiEvent {
         @org.jetbrains.annotations.NotNull()
         private final java.lang.String category = null;
         
-        public Paginate(@org.jetbrains.annotations.NotNull()
-        java.lang.String category) {
-            super();
-        }
-        
-        @org.jetbrains.annotations.NotNull()
-        public final java.lang.String getCategory() {
-            return null;
-        }
-        
         @org.jetbrains.annotations.NotNull()
         public final java.lang.String component1() {
             return null;
@@ -43,6 +33,16 @@ public abstract interface MovieListUiEvent {
         @java.lang.Override()
         @org.jetbrains.annotations.NotNull()
         public java.lang.String toString() {
+            return null;
+        }
+        
+        public Paginate(@org.jetbrains.annotations.NotNull()
+        java.lang.String category) {
+            super();
+        }
+        
+        @org.jetbrains.annotations.NotNull()
+        public final java.lang.String getCategory() {
             return null;
         }
     }

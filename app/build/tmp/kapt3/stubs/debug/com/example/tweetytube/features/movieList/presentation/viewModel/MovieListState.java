@@ -20,62 +20,6 @@ public final class MovieListState {
     @org.jetbrains.annotations.NotNull()
     private final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> topRatedMovieList = null;
     
-    public MovieListState(boolean isLoadingPopular, boolean isLoadingUpcoming, boolean isLoadingTopRated, @org.jetbrains.annotations.NotNull()
-    java.lang.String currentCategory, int popularMovieListPage, int upcomingMovieListPage, int topRatedMovieListPage, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> popularMovieList, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> upcomingMovieList, @org.jetbrains.annotations.NotNull()
-    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> topRatedMovieList) {
-        super();
-    }
-    
-    public final boolean isLoadingPopular() {
-        return false;
-    }
-    
-    public final boolean isLoadingUpcoming() {
-        return false;
-    }
-    
-    public final boolean isLoadingTopRated() {
-        return false;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCurrentCategory() {
-        return null;
-    }
-    
-    public final int getPopularMovieListPage() {
-        return 0;
-    }
-    
-    public final int getUpcomingMovieListPage() {
-        return 0;
-    }
-    
-    public final int getTopRatedMovieListPage() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getPopularMovieList() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getUpcomingMovieList() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getTopRatedMovieList() {
-        return null;
-    }
-    
-    public MovieListState() {
-        super();
-    }
-    
     public final boolean component1() {
         return false;
     }
@@ -144,5 +88,61 @@ public final class MovieListState {
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
         return null;
+    }
+    
+    public MovieListState(boolean isLoadingPopular, boolean isLoadingUpcoming, boolean isLoadingTopRated, @org.jetbrains.annotations.NotNull()
+    java.lang.String currentCategory, int popularMovieListPage, int upcomingMovieListPage, int topRatedMovieListPage, @org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> popularMovieList, @org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> upcomingMovieList, @org.jetbrains.annotations.NotNull()
+    java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> topRatedMovieList) {
+        super();
+    }
+    
+    public final boolean isLoadingPopular() {
+        return false;
+    }
+    
+    public final boolean isLoadingUpcoming() {
+        return false;
+    }
+    
+    public final boolean isLoadingTopRated() {
+        return false;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCurrentCategory() {
+        return null;
+    }
+    
+    public final int getPopularMovieListPage() {
+        return 0;
+    }
+    
+    public final int getUpcomingMovieListPage() {
+        return 0;
+    }
+    
+    public final int getTopRatedMovieListPage() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getPopularMovieList() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getUpcomingMovieList() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<com.example.tweetytube.movie_list.data.repo.local.Movie> getTopRatedMovieList() {
+        return null;
+    }
+    
+    public MovieListState() {
+        super();
     }
 }

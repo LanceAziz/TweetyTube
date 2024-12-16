@@ -1,3 +1,4 @@
+import org.gradle.kotlin.dsl.ksp
 import java.util.Properties
 
 plugins {
@@ -5,7 +6,11 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.jetbrainsKotlinSerialization)
-    id("kotlin-kapt")
+    alias(libs.plugins.ksp)
+//    id("kotlin-kapt")
+//    id("org.jetbrains.kotlin.kapt")
+//    id("com.google.devtools.ksp")
+
     id("com.google.dagger.hilt.android")
 }
 
@@ -74,39 +79,37 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     // Animated Splash Screen
-    implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation(libs.androidx.core.splashscreen)
 
     // Animations
-    implementation("com.exyte:animated-navigation-bar:1.0.0")
-    implementation ("com.airbnb.android:lottie-compose:6.6.1")
+    implementation(libs.animated.navigation.bar)
+    implementation (libs.lottie.compose)
 
     // Coil
-    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation(libs.coil.compose)
 
     // Dagger Hilt
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
 
     // Retrofit
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation("com.squareup.okhttp3:okhttp:4.11.0")
-    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
 
     // Room
-    implementation("androidx.room:room-ktx:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
-    implementation("androidx.room:room-paging:2.6.1")
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.paging)
 
-    // Extended Icons
-    implementation("androidx.compose.material:material-icons-extended:1.7.5")
 }
 
-kapt {
-    correctErrorTypes = true
-    arguments {
-        arg("room.schemaLocation", "$projectDir/schemas")
-    }
-}
+//kapt {
+//    correctErrorTypes = true
+//    arguments {
+//        arg("room.schemaLocation", "$projectDir/schemas")
+//    }
+//}

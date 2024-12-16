@@ -39,8 +39,6 @@ import com.example.tweetytube.features.details.presentation.components.collectio
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
 import com.example.tweetytube.ui.theme.errorLight
-import kotlinx.coroutines.delay
-
 @Composable
 fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
     val detailsState by detailsViewModel.detailsState.collectAsState()

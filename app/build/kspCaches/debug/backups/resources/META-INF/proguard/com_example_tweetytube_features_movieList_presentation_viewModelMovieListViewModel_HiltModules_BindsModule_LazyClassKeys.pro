@@ -1,0 +1,3 @@
+-keep,allowobfuscation,allowshrinking class com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
+-keep,allowobfuscation,allowshrinking class com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
+-keep,allowobfuscation,allowshrinking class com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel

@@ -16,52 +16,6 @@ public final class Credits {
     @org.jetbrains.annotations.NotNull()
     private final java.lang.String profile_path = null;
     
-    public Credits(int cast_id, @org.jetbrains.annotations.NotNull()
-    java.lang.String character, @org.jetbrains.annotations.NotNull()
-    java.lang.String credit_id, int gender, int id, @org.jetbrains.annotations.NotNull()
-    java.lang.String known_for_department, @org.jetbrains.annotations.NotNull()
-    java.lang.String name, @org.jetbrains.annotations.NotNull()
-    java.lang.String profile_path) {
-        super();
-    }
-    
-    public final int getCast_id() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCharacter() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getCredit_id() {
-        return null;
-    }
-    
-    public final int getGender() {
-        return 0;
-    }
-    
-    public final int getId() {
-        return 0;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getKnown_for_department() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getName() {
-        return null;
-    }
-    
-    @org.jetbrains.annotations.NotNull()
-    public final java.lang.String getProfile_path() {
-        return null;
-    }
-    
     public final int component1() {
         return 0;
     }
@@ -123,6 +77,52 @@ public final class Credits {
     @java.lang.Override()
     @org.jetbrains.annotations.NotNull()
     public java.lang.String toString() {
+        return null;
+    }
+    
+    public Credits(int cast_id, @org.jetbrains.annotations.NotNull()
+    java.lang.String character, @org.jetbrains.annotations.NotNull()
+    java.lang.String credit_id, int gender, int id, @org.jetbrains.annotations.NotNull()
+    java.lang.String known_for_department, @org.jetbrains.annotations.NotNull()
+    java.lang.String name, @org.jetbrains.annotations.NotNull()
+    java.lang.String profile_path) {
+        super();
+    }
+    
+    public final int getCast_id() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCharacter() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getCredit_id() {
+        return null;
+    }
+    
+    public final int getGender() {
+        return 0;
+    }
+    
+    public final int getId() {
+        return 0;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getKnown_for_department() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getName() {
+        return null;
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final java.lang.String getProfile_path() {
         return null;
     }
 }

@@ -17,6 +17,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import com.example.tweetytube.core.utils.Screen.*
+import com.example.tweetytube.features.auth.presentation.screens.Login
 import com.example.tweetytube.features.details.presentation.screens.Details
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.favorites.presentation.screens.Favorites
@@ -51,7 +52,7 @@ fun NavigationComponent(
             .padding(16.dp)
             .clip(RoundedCornerShape(36.dp)),
         navController = navController,
-        startDestination = HomeScreen
+        startDestination = LoginScreen
     ) {
         composable<HomeScreen>(
             enterTransition = { animations.enterTransition() },
@@ -81,6 +82,14 @@ fun NavigationComponent(
             popExitTransition = { animations.exitTransition() }
         ) {
             Profile()
+        }
+        composable<LoginScreen>(
+            enterTransition = { animations.enterTransition() },
+            exitTransition = { animations.exitTransition() },
+            popEnterTransition = { animations.enterTransition() },
+            popExitTransition = { animations.exitTransition() }
+        ) {
+            Login()
         }
         composable<SearchScreen>(
             enterTransition = { animations.enterTransition() },
