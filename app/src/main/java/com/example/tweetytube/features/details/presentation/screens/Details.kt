@@ -37,7 +37,9 @@ import com.example.tweetytube.R
 import com.example.tweetytube.core.utils.Urls.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.features.details.presentation.components.collectionRow.CollectionRow
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
+import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
 import com.example.tweetytube.ui.theme.errorLight
+import kotlinx.coroutines.delay
 
 @Composable
 fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
@@ -45,98 +47,102 @@ fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
     LaunchedEffect(id) {
         detailsViewModel.setCurrentMovieId(id)
     }
-    Box(modifier = Modifier.fillMaxSize()) {
-        Column(modifier = Modifier.padding(4.dp)) {
-            AsyncImage(
-                model = "${IMAGE_BASE_URL}${detailsState.movie?.backdrop_path}",
-                contentDescription = "Image with rounded corners",
-                modifier = Modifier
-                    .height(200.dp)
-                    .clip(RoundedCornerShape(28.dp)),
-                contentScale = ContentScale.Crop
-            )
-        }
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-        ) {
-            Column(
-                modifier = Modifier
-                    .offset(y = 160.dp)
-                    .clip(RoundedCornerShape(32.dp))
-                    .background(MaterialTheme.colorScheme.background)
-            ) {
-                Box(
+    if (detailsState.isMovieLoading || detailsState.isCreditsLoading) {
+        LoadingAnimation()
+    } else {
+        Box(modifier = Modifier.fillMaxSize()) {
+            Column(modifier = Modifier.padding(4.dp)) {
+                AsyncImage(
+                    model = "${IMAGE_BASE_URL}${detailsState.movie?.backdrop_path}",
+                    contentDescription = "Image with rounded corners",
                     modifier = Modifier
-                        .fillMaxSize()
-                        .background(MaterialTheme.colorScheme.background)
-                        .padding(start = 24.dp, end = 24.dp, top = 30.dp, bottom = 180.dp)
-                ) {
-                    Column {
-                        Row(modifier = Modifier.fillMaxWidth()) {
-                            Column {
-                                Text(
-                                    text = "${detailsState.movie?.title}",
-                                    fontSize = 32.sp,
-                                    fontWeight = FontWeight.Bold
-                                )
-                                Text(
-                                    text = "Rating: ${detailsState.movie?.vote_average}",
-                                    fontSize = 12.sp,
-                                    color = MaterialTheme.colorScheme.outline
-                                )
-                                Text(
-                                    text = "Release Date: ${detailsState.movie?.release_date}",
-                                    fontSize = 12.sp,
-                                    color = MaterialTheme.colorScheme.outline
-                                )
-                            }
-                        }
-                        Column(modifier = Modifier.padding(top = 16.dp)) {
-                            Text(
-                                text = "Overview",
-                                fontSize = 20.sp,
-                                fontWeight = FontWeight.Bold
-                            )
-                            Text(
-                                text = "${detailsState.movie?.overview}",
-                                fontSize = 14.sp,
-                            )
-                        }
-                        CollectionRow(title = "Cast", credits = detailsState.credits)
-                    }
-                }
+                        .height(200.dp)
+                        .clip(RoundedCornerShape(28.dp)),
+                    contentScale = ContentScale.Crop
+                )
             }
-            Column(
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .offset(y = 120.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
             ) {
                 Column(
                     modifier = Modifier
-                        .shadow(
-                            elevation = 10.dp,
-                            shape = RoundedCornerShape(32.dp),
-                            ambientColor = Color.White
-                        )
+                        .offset(y = 160.dp)
                         .clip(RoundedCornerShape(32.dp))
-
+                        .background(MaterialTheme.colorScheme.background)
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(MaterialTheme.colorScheme.background)
+                            .padding(start = 24.dp, end = 24.dp, top = 30.dp, bottom = 180.dp)
+                    ) {
+                        Column {
+                            Row(modifier = Modifier.fillMaxWidth()) {
+                                Column {
+                                    Text(
+                                        text = "${detailsState.movie?.title}",
+                                        fontSize = 32.sp,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                    Text(
+                                        text = "Rating: ${detailsState.movie?.vote_average}",
+                                        fontSize = 12.sp,
+                                        color = MaterialTheme.colorScheme.outline
+                                    )
+                                    Text(
+                                        text = "Release Date: ${detailsState.movie?.release_date}",
+                                        fontSize = 12.sp,
+                                        color = MaterialTheme.colorScheme.outline
+                                    )
+                                }
+                            }
+                            Column(modifier = Modifier.padding(top = 16.dp)) {
+                                Text(
+                                    text = "Overview",
+                                    fontSize = 20.sp,
+                                    fontWeight = FontWeight.Bold
+                                )
+                                Text(
+                                    text = "${detailsState.movie?.overview}",
+                                    fontSize = 14.sp,
+                                )
+                            }
+                            CollectionRow(title = "Cast", credits = detailsState.credits)
+                        }
+                    }
+                }
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .offset(y = 120.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Column(
                         modifier = Modifier
-                            .background(MaterialTheme.colorScheme.background)
-                            .padding(16.dp)
+                            .shadow(
+                                elevation = 10.dp,
+                                shape = RoundedCornerShape(32.dp),
+                                ambientColor = Color.White
+                            )
+                            .clip(RoundedCornerShape(32.dp))
+
                     ) {
-                        Icon(
+                        Column(
                             modifier = Modifier
-                                .size(36.dp)
-                                .clickable { TODO("Implement Favorites") },
-                            painter = painterResource(id = R.drawable.heart_solid),
-                            contentDescription = "Favorite Button",
-                            tint = errorLight
-                        )
+                                .background(MaterialTheme.colorScheme.background)
+                                .padding(16.dp)
+                        ) {
+                            Icon(
+                                modifier = Modifier
+                                    .size(36.dp)
+                                    .clickable { TODO("Implement Favorites") },
+                                painter = painterResource(id = R.drawable.heart_solid),
+                                contentDescription = "Favorite Button",
+                                tint = errorLight
+                            )
+                        }
                     }
                 }
             }

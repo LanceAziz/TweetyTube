@@ -44,7 +44,6 @@ class CreditsRepoImp @Inject constructor(
                 creditsDto.toCreditsEntity()
             }
 
-            Log.d("yessssssssssssssssssssssssssss","$creditEntities")
             creditsDatabase.creditsDao.upsertMovieList(creditEntities)
 
             emit(Resource.Success(data = creditEntities.map { creditEntity ->

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.tweetytube.app-mergeDebugResources-65:/values-v29/values-v29.xml",
+            "outputFile": "com.example.tweetytube.app-mergeDebugResources-68:/values-v29/values-v29.xml",
             "map": [
                 {
                     "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\85b3e2fd79dcc1b2a9356d2a34c4dcdf\\transformed\\core-splashscreen-1.0.1\\res\\values-v29\\values-v29.xml",

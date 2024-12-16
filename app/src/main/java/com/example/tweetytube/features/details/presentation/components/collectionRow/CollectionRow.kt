@@ -25,8 +25,8 @@ fun CollectionRow(title: String, credits: List<Credits>) {
         items(1) {
             credits.forEach {
                 MicroCard(image = it.profile_path, name = it.name, type = it.character)
+                Spacer(Modifier.width(20.dp))
             }
-            Spacer(Modifier.width(20.dp))
         }
     }
 }

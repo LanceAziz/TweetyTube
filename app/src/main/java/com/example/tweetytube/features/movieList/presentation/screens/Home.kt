@@ -11,10 +11,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.tweetytube.features.movieList.presentation.components.moviesCollectionRow.MoviesCollectionRow
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
+import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
 
 @Composable
-fun Home(movieListViewModel: MovieListViewModel = hiltViewModel(),
-         goToDetails: (Int) -> Unit
+fun Home(
+    movieListViewModel: MovieListViewModel = hiltViewModel(),
+    goToDetails: (Int) -> Unit
 ) {
     val movieListState = movieListViewModel.movieListState.collectAsState().value
 
@@ -23,18 +25,21 @@ fun Home(movieListViewModel: MovieListViewModel = hiltViewModel(),
         "Upcoming Movies" to movieListState.upcomingMovieList,
         "Top Rated Movies" to movieListState.topRatedMovieList
     )
-
-    LazyColumn {
-        itemsIndexed(categoriesWithMovies) { index, item ->
-            val (categoryTitle, movieList) = item
-            if (index == 0) {
-                Spacer(modifier = Modifier.height(16.dp))
+    if (movieListState.isLoadingPopular || movieListState.isLoadingUpcoming || movieListState.isLoadingTopRated) {
+        LoadingAnimation()
+    } else {
+        LazyColumn {
+            itemsIndexed(categoriesWithMovies) { index, item ->
+                val (categoryTitle, movieList) = item
+                if (index == 0) {
+                    Spacer(modifier = Modifier.height(16.dp))
+                }
+                MoviesCollectionRow(
+                    rowTitle = categoryTitle,
+                    movies = movieList,
+                    goToDetails = goToDetails
+                )
             }
-            MoviesCollectionRow(
-                rowTitle = categoryTitle,
-                movies = movieList,
-                goToDetails = goToDetails
-            )
         }
     }
 }

@@ -6,3 +6,8 @@ plugins {
     alias(libs.plugins.jetbrainsKotlinSerialization) apply false
     id("com.google.dagger.hilt.android") version "2.51.1" apply false
 }
+allprojects{
+    repositories{
+        maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots/") }
+    }
+}

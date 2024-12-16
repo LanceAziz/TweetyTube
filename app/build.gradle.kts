@@ -76,8 +76,9 @@ dependencies {
     // Animated Splash Screen
     implementation("androidx.core:core-splashscreen:1.0.1")
 
-    // Animated Bottom Navigation Bar
+    // Animations
     implementation("com.exyte:animated-navigation-bar:1.0.0")
+    implementation ("com.airbnb.android:lottie-compose:6.6.1")
 
     // Coil
     implementation("io.coil-kt:coil-compose:2.4.0")
