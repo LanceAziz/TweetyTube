@@ -4,7 +4,7 @@
             "outputFile": "com.example.tweetytube.app-mergeDebugResources-67:/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\lance\\.gradle\\caches\\8.9\\transforms\\b90d6fb5dd3ed6d5fd85489391a9337b\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\Lance Aziz\\.gradle\\caches\\8.9\\transforms\\b90d6fb5dd3ed6d5fd85489391a9337b\\transformed\\appcompat-1.6.1\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

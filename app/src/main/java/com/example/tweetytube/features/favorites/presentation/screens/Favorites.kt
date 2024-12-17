@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.tweetytube.R
 import com.example.tweetytube.core.utils.Screen
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.movieList.presentation.components.MovieMiniCard.MovieMiniCard
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.ui.theme.bgLight
@@ -38,21 +39,30 @@ import com.example.tweetytube.ui.theme.errorLight
 import com.example.tweetytube.ui.theme.secondaryLight
 
 @Composable
-fun Favorites(navController: MovieListViewModel, goToDetails: (Int) -> Unit) {
-    val movieList =
-        navController.movieListState.collectAsStateWithLifecycle().value.popularMovieList
+fun Favorites(
+    navController: MovieListViewModel,
+    favoritesViewModel: FavoritesViewModel,
+    userToken: String?,
+    goToDetails: (Int) -> Unit
+) {
+
+    val favoritesState = favoritesViewModel.favoritesState.collectAsStateWithLifecycle()
+    val movieList = favoritesState.value.data ?: emptyList()
+
 
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        items(movieList) {
-            movie ->
+        items(movieList) { movie ->
             val context = LocalContext.current
             val dismissState = rememberSwipeToDismissBoxState(
                 confirmValueChange = {
                     if (it == SwipeToDismissBoxValue.EndToStart) {
-                        Toast.makeText(context, "${movie.title} removed!!", Toast.LENGTH_SHORT).show()
+                        favoritesViewModel.removeFavorite(userToken, movie.id)
+                        favoritesViewModel.getFavorites(userToken)
+                        Toast.makeText(context, "${movie.title} removed!!", Toast.LENGTH_SHORT)
+                            .show()
                         true
                     } else {
                         false
@@ -67,7 +77,7 @@ fun Favorites(navController: MovieListViewModel, goToDetails: (Int) -> Unit) {
                         modifier = Modifier
                             .fillMaxSize()
                             .background(secondaryLight)
-                            .padding(horizontal = 30. dp),
+                            .padding(horizontal = 30.dp),
                         contentAlignment = Alignment.CenterEnd
                     ) {
                         Icon(
@@ -82,7 +92,8 @@ fun Favorites(navController: MovieListViewModel, goToDetails: (Int) -> Unit) {
                 }
             ) {
                 Column(
-                    modifier = Modifier.background(MaterialTheme.colorScheme.background)
+                    modifier = Modifier
+                        .background(MaterialTheme.colorScheme.background)
                         .clip(RoundedCornerShape(18.dp))
                 ) {
                     MovieMiniCard(movieSearch = movie, goToDetails = goToDetails)

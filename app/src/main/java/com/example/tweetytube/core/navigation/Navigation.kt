@@ -23,6 +23,7 @@ import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel
 import com.example.tweetytube.features.details.presentation.screens.Details
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.favorites.presentation.screens.Favorites
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.movieList.presentation.screens.Home
 import com.example.tweetytube.features.movieList.presentation.screens.Search
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
@@ -39,7 +40,9 @@ fun NavigationComponent(
     navController: NavHostController,
     sharedViewModel: MovieListViewModel,
     detailsViewModel: DetailsViewModel,
-    authViewModel: AuthViewModel
+    authViewModel: AuthViewModel,
+    favoritesViewModel: FavoritesViewModel,
+    userToken: String?
 ) {
     val animations = AnimationTransitions(
         enterTransition = {
@@ -64,6 +67,8 @@ fun NavigationComponent(
             popExitTransition = { animations.exitTransition() }
         ) {
             Home(movieListViewModel = sharedViewModel,
+                favoritesViewModel = favoritesViewModel,
+                userToken = userToken,
                 goToDetails = { id ->
                     navController.navigate(DetailsScreen(id))
                 }
@@ -76,9 +81,13 @@ fun NavigationComponent(
             popEnterTransition = { animations.enterTransition() },
             popExitTransition = { animations.exitTransition() }
         ) {
-            Favorites(navController = sharedViewModel, goToDetails = { id ->
-                navController.navigate(DetailsScreen(id))
-            })
+            Favorites(
+                navController = sharedViewModel,
+                favoritesViewModel = favoritesViewModel,
+                userToken = userToken,
+                goToDetails = { id ->
+                    navController.navigate(DetailsScreen(id))
+                })
         }
         composable<ProfileScreen>(
             enterTransition = { animations.enterTransition() },
@@ -124,7 +133,12 @@ fun NavigationComponent(
         )
         {
             val details = requireNotNull(it.toRoute<DetailsScreen>())
-            Details(id = details.id, detailsViewModel = detailsViewModel)
+            Details(
+                id = details.id,
+                userToken = userToken,
+                favoritesViewModel = favoritesViewModel,
+                detailsViewModel = detailsViewModel
+            )
         }
     }
 }

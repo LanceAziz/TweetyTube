@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.movieList.presentation.components.movieCard.MovieCard
 import com.example.tweetytube.movie_list.data.repo.local.Movie
 import kotlin.math.absoluteValue
@@ -28,6 +29,8 @@ import kotlin.math.absoluteValue
 fun MoviesCollectionRow(
     rowTitle: String,
     movies: List<Movie>,
+    favoritesViewModel: FavoritesViewModel,
+    userToken: String?,
     goToDetails: (Int) -> Unit
 ) {
     Column {
@@ -71,11 +74,15 @@ fun MoviesCollectionRow(
                     start = if (isFirstCard) 0.dp else 16.dp,
                     end = if (isLastCard) 0.dp else 16.dp
                 )) {
-                MovieCard(movie = movies[index],
-                    modifier = Modifier.clickable{
+                MovieCard(
+                    movie = movies[index],
+                    modifier = Modifier.clickable {
                         goToDetails(movies[index].id)
                         Log.d("Movie Id", movies[index].id.toString())
-                    })
+                    },
+                    favoritesViewModel = favoritesViewModel,
+                    userToken = userToken
+                )
             }
         }
     }

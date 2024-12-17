@@ -14,12 +14,14 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.tweetytube.core.navigation.NavigationComponent
 import com.example.tweetytube.core.utils.Screen
 import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.features.supplementary.bottomBar.BottomNavbar
 import com.example.tweetytube.features.supplementary.topBar.TopBar
@@ -38,6 +40,9 @@ class MainActivity : ComponentActivity() {
                 val sharedMovieListViewModel = hiltViewModel<MovieListViewModel>()
                 val detailsViewModel = hiltViewModel<DetailsViewModel>()
                 val authViewModel = hiltViewModel<AuthViewModel>()
+                val favoritesViewModel = hiltViewModel<FavoritesViewModel>()
+
+                val userToken = authViewModel.authState.collectAsStateWithLifecycle().value.userToken
 
                 val navBackStackEntry = navController.currentBackStackEntryAsState().value
                 val currentDestination = navBackStackEntry?.destination
@@ -63,7 +68,9 @@ class MainActivity : ComponentActivity() {
                         navController = navController,
                         sharedViewModel = sharedMovieListViewModel,
                         detailsViewModel = detailsViewModel,
-                        authViewModel = authViewModel
+                        authViewModel = authViewModel,
+                        favoritesViewModel = favoritesViewModel,
+                        userToken = userToken
                     )
                 }
             }

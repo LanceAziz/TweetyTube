@@ -9,6 +9,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.movieList.presentation.components.moviesCollectionRow.MoviesCollectionRow
 import com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel
 import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
@@ -16,6 +17,8 @@ import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
 @Composable
 fun Home(
     movieListViewModel: MovieListViewModel = hiltViewModel(),
+    favoritesViewModel: FavoritesViewModel,
+    userToken: String?,
     goToDetails: (Int) -> Unit
 ) {
     val movieListState = movieListViewModel.movieListState.collectAsState().value
@@ -37,6 +40,8 @@ fun Home(
                 MoviesCollectionRow(
                     rowTitle = categoryTitle,
                     movies = movieList,
+                    favoritesViewModel = favoritesViewModel,
+                    userToken = userToken,
                     goToDetails = goToDetails
                 )
             }

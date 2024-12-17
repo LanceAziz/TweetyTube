@@ -37,12 +37,19 @@ import com.example.tweetytube.R
 import com.example.tweetytube.core.utils.Urls.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.features.details.presentation.components.collectionRow.CollectionRow
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
 import com.example.tweetytube.ui.theme.errorLight
 import com.example.tweetytube.ui.theme.secondaryLight
 
 @Composable
-fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
+fun Details(
+    id: Int,
+    detailsViewModel: DetailsViewModel = hiltViewModel(),
+    favoritesViewModel: FavoritesViewModel,
+    userToken: String?
+) {
+    val isFavorite = favoritesViewModel.isFavorited(id)
     val detailsState by detailsViewModel.detailsState.collectAsState()
     LaunchedEffect(id) {
         detailsViewModel.setCurrentMovieId(id)
@@ -137,8 +144,14 @@ fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
                             Icon(
                                 modifier = Modifier
                                     .size(36.dp)
-                                    .clickable { TODO("Implement Favorites") },
-                                painter = painterResource(id = R.drawable.heart_solid),
+                                    .clickable {
+                                        if (isFavorite) {
+                                            favoritesViewModel.removeFavorite(userToken, id)
+                                        } else {
+                                            favoritesViewModel.addFavorite(userToken, id)
+                                        }
+                                    },
+                                painter = painterResource(id = if (isFavorite) R.drawable.heart_solid else R.drawable.heart_outline),
                                 contentDescription = "Favorite Button",
                                 tint = secondaryLight
                             )

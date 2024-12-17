@@ -30,12 +30,14 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.tweetytube.R
 import com.example.tweetytube.core.utils.Urls.Companion.IMAGE_BASE_URL
+import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.ui.theme.*
 import kotlin.math.roundToInt
 
 @Composable
-fun MovieCard(movie: Movie,modifier: Modifier) {
+fun MovieCard(movie: Movie, modifier: Modifier, favoritesViewModel: FavoritesViewModel,userToken: String?) {
+    val isFavorite = favoritesViewModel.isFavorited(movie.id)
     Column(
         modifier = modifier
     ) {
@@ -57,8 +59,20 @@ fun MovieCard(movie: Movie,modifier: Modifier) {
                 Icon(
                     modifier = Modifier
                         .size(32.dp)
-                        .clickable { TODO("Implement Favorites") },
-                    painter = painterResource(id = R.drawable.heart_solid),
+                        .clickable {
+                            if(isFavorite){
+                                favoritesViewModel.removeFavorite(userToken, movie.id)
+                            }else{
+                                favoritesViewModel.addFavorite(userToken, movie.id)
+                            }
+                        },
+                    painter = painterResource(
+                        id = if (isFavorite) {
+                            R.drawable.heart_solid
+                        } else {
+                            R.drawable.heart_outline
+                        }
+                    ),
                     contentDescription = "Favorite Button",
                     tint = secondaryLight
                 )

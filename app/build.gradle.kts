@@ -30,6 +30,7 @@ android {
         properties.load(project.rootProject.file("local.properties").inputStream())
 
         buildConfigField("String", "MOVIES_API_KEY", properties.getProperty("MOVIES_API_KEY"))
+        buildConfigField("String", "INTEGRATION_API_KEY", properties.getProperty("INTEGRATION_API_KEY"))
     }
 
     buildTypes {

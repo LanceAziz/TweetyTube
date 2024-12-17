@@ -10,6 +10,9 @@ import com.example.tweetytube.features.auth.domain.repo.AuthRepo
 import com.example.tweetytube.features.details.data.local.CreditsDatabase
 import com.example.tweetytube.features.details.data.remote.CreditsApi
 import com.example.tweetytube.features.movieList.data.remote.MoviesApi
+import com.example.tweetytube.features.favorites.data.remote.FavoritesApi
+import com.example.tweetytube.features.favorites.data.repo.FavoritesRepoImp
+import com.example.tweetytube.features.favorites.domain.repo.FavoritesRepo
 import com.example.tweetytube.movie_list.data.repo.local.MovieDatabase
 import dagger.Module
 import dagger.Provides
@@ -49,7 +52,7 @@ object AppModule {
             .build()
     }
 
-    // 3. Provide Retrofit for Auth API
+    // 3. Provide Retrofit for Auth and Favorites APIs
     @Provides
     @Singleton
     @Named("AuthRetrofit")
@@ -77,10 +80,20 @@ object AppModule {
     fun provideAuthApi(@Named("AuthRetrofit") retrofit: Retrofit): AuthApi =
         retrofit.create(AuthApi::class.java)
 
-    // 5. Provide AuthRepo
+    @Provides
+    @Singleton
+    fun provideFavoritesApi(@Named("AuthRetrofit") retrofit: Retrofit): FavoritesApi =
+        retrofit.create(FavoritesApi::class.java)
+
+    // 5. Provide Repos
     @Provides
     @Singleton
     fun provideAuthRepo(authApi: AuthApi): AuthRepo = AuthRepoImp(authApi)
+
+    @Provides
+    @Singleton
+    fun provideFavoritesRepo(favoritesApi: FavoritesApi): FavoritesRepo =
+        FavoritesRepoImp(favoritesApi)
 
     // 6. Provide Room Databases
     @Provides
