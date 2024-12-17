@@ -39,6 +39,8 @@ import com.example.tweetytube.features.details.presentation.components.collectio
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
 import com.example.tweetytube.ui.theme.errorLight
+import com.example.tweetytube.ui.theme.secondaryLight
+
 @Composable
 fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
     val detailsState by detailsViewModel.detailsState.collectAsState()
@@ -138,7 +140,7 @@ fun Details(id: Int, detailsViewModel: DetailsViewModel = hiltViewModel()) {
                                     .clickable { TODO("Implement Favorites") },
                                 painter = painterResource(id = R.drawable.heart_solid),
                                 contentDescription = "Favorite Button",
-                                tint = errorLight
+                                tint = secondaryLight
                             )
                         }
                     }

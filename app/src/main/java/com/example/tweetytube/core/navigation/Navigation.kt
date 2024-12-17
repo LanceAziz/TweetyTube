@@ -55,7 +55,7 @@ fun NavigationComponent(
             .padding(16.dp)
             .clip(RoundedCornerShape(36.dp)),
         navController = navController,
-        startDestination = FavoriteScreen
+        startDestination = LoginScreen
     ) {
         composable<HomeScreen>(
             enterTransition = { animations.enterTransition() },

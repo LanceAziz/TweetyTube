@@ -150,6 +150,15 @@ fun Login(navController: NavHostController, authViewModel: AuthViewModel) {
                     navController.navigate(Screen.SignUpScreen)
                 }
             )
+            Spacer(Modifier.height(8.dp))
+            Text(
+                text = "Home!",
+                style = TextStyle(textDecoration = TextDecoration.Underline),
+                color = primaryLight,
+                modifier = Modifier.clickable {
+                    navController.navigate(Screen.HomeScreen)
+                }
+            )
         }
     }
 }

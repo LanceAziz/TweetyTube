@@ -689,6 +689,7 @@ int drawable btn_radio_on_to_off_mtrl_animation 0x7f07079d
 int drawable compat_splash_screen 0x7f07079e
 int drawable compat_splash_screen_no_icon_background 0x7f07079f
 int drawable fire_solid 0x7f0707a0
+int drawable heart_crack_solid 0x7f0707cb
 int drawable heart_outline 0x7f0707a1
 int drawable heart_solid 0x7f0707a2
 int drawable house_solid 0x7f0707a3

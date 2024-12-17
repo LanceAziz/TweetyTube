@@ -60,7 +60,7 @@ fun MovieCard(movie: Movie,modifier: Modifier) {
                         .clickable { TODO("Implement Favorites") },
                     painter = painterResource(id = R.drawable.heart_solid),
                     contentDescription = "Favorite Button",
-                    tint = errorLight
+                    tint = secondaryLight
                 )
             }
 

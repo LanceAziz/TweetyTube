@@ -9,6 +9,7 @@ color teal_200
 color teal_700
 color white
 drawable fire_solid
+drawable heart_crack_solid
 drawable heart_outline
 drawable heart_solid
 drawable house_solid
