@@ -724,10 +724,13 @@ int drawable tooltip_frame_light 0x7f0707c0
 int drawable tweeting_loading 0x7f0707c1
 int drawable tweety_error_dark 0x7f0707c2
 int drawable tweety_error_light 0x7f0707c3
-int drawable tweety_login 0x7f0707c4
-int drawable tweety_search 0x7f0707c5
-int drawable tweety_splash_screen 0x7f0707c6
-int drawable user_solid 0x7f0707c7
+int drawable tweety_login_dark 0x7f0707c4
+int drawable tweety_login_light 0x7f0707c5
+int drawable tweety_search 0x7f0707c6
+int drawable tweety_signup_dark 0x7f0707c7
+int drawable tweety_signup_light 0x7f0707c8
+int drawable tweety_splash_screen 0x7f0707c9
+int drawable user_solid 0x7f0707ca
 int font poppins_black 0x7f080000
 int font poppins_blackitalic 0x7f080001
 int font poppins_bold 0x7f080002

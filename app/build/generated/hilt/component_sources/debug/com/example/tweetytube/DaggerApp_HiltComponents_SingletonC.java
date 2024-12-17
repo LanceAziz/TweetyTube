@@ -6,10 +6,21 @@ import android.view.View;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
-import com.example.tweetytube.core.di.AppModule_ProvidesCreditsApiFactory;
-import com.example.tweetytube.core.di.AppModule_ProvidesCreditsDatabaseFactory;
-import com.example.tweetytube.core.di.AppModule_ProvidesMovieApiFactory;
-import com.example.tweetytube.core.di.AppModule_ProvidesMovieDatabaseFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideAuthApiFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideAuthRepoFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideAuthRetrofitFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideCreditsApiFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideCreditsDatabaseFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideMovieDatabaseFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideMoviesApiFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideOkHttpClientFactory;
+import com.example.tweetytube.core.di.AppModule_ProvideRetrofitFactory;
+import com.example.tweetytube.features.auth.data.remote.AuthApi;
+import com.example.tweetytube.features.auth.domain.repo.AuthRepo;
+import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel;
+import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel_HiltModules;
+import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel_HiltModules_BindsModule_Binds_LazyMapKey;
+import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel_HiltModules_KeyModule_Provide_LazyMapKey;
 import com.example.tweetytube.features.details.data.local.CreditsDatabase;
 import com.example.tweetytube.features.details.data.remote.CreditsApi;
 import com.example.tweetytube.features.details.data.repo.CreditsRepoImp;
@@ -51,6 +62,8 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import javax.annotation.processing.Generated;
+import okhttp3.OkHttpClient;
+import retrofit2.Retrofit;
 
 @DaggerGenerated
 @Generated(
@@ -386,7 +399,7 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @Override
     public Map<Class<?>, Boolean> getViewModelKeys() {
-      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(2).put(DetailsViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, DetailsViewModel_HiltModules.KeyModule.provide()).put(MovieListViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, MovieListViewModel_HiltModules.KeyModule.provide()).build());
+      return LazyClassKeyMap.<Boolean>of(MapBuilder.<String, Boolean>newMapBuilder(3).put(AuthViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, AuthViewModel_HiltModules.KeyModule.provide()).put(DetailsViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, DetailsViewModel_HiltModules.KeyModule.provide()).put(MovieListViewModel_HiltModules_KeyModule_Provide_LazyMapKey.lazyClassKeyName, MovieListViewModel_HiltModules.KeyModule.provide()).build());
     }
 
     @Override
@@ -412,6 +425,8 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     private final ViewModelCImpl viewModelCImpl = this;
 
+    private Provider<AuthViewModel> authViewModelProvider;
+
     private Provider<DetailsViewModel> detailsViewModelProvider;
 
     private Provider<MovieListViewModel> movieListViewModelProvider;
@@ -429,13 +444,14 @@ public final class DaggerApp_HiltComponents_SingletonC {
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam,
         final ViewModelLifecycle viewModelLifecycleParam) {
-      this.detailsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
-      this.movieListViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.authViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 0);
+      this.detailsViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 1);
+      this.movieListViewModelProvider = new SwitchingProvider<>(singletonCImpl, activityRetainedCImpl, viewModelCImpl, 2);
     }
 
     @Override
     public Map<Class<?>, javax.inject.Provider<ViewModel>> getHiltViewModelMap() {
-      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(2).put(DetailsViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) detailsViewModelProvider)).put(MovieListViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) movieListViewModelProvider)).build());
+      return LazyClassKeyMap.<javax.inject.Provider<ViewModel>>of(MapBuilder.<String, javax.inject.Provider<ViewModel>>newMapBuilder(3).put(AuthViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) authViewModelProvider)).put(DetailsViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) detailsViewModelProvider)).put(MovieListViewModel_HiltModules_BindsModule_Binds_LazyMapKey.lazyClassKeyName, ((Provider) movieListViewModelProvider)).build());
     }
 
     @Override
@@ -464,10 +480,13 @@ public final class DaggerApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel 
+          case 0: // com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel 
+          return (T) new AuthViewModel(singletonCImpl.provideAuthRepoProvider.get());
+
+          case 1: // com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel 
           return (T) new DetailsViewModel(singletonCImpl.bindMovieListRepositoryProvider.get(), singletonCImpl.bindCreditsRepositoryProvider.get());
 
-          case 1: // com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel 
+          case 2: // com.example.tweetytube.features.movieList.presentation.viewModel.MovieListViewModel 
           return (T) new MovieListViewModel(singletonCImpl.bindMovieListRepositoryProvider.get());
 
           default: throw new AssertionError(id);
@@ -550,17 +569,27 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     private final SingletonCImpl singletonCImpl = this;
 
-    private Provider<MoviesApi> providesMovieApiProvider;
+    private Provider<OkHttpClient> provideOkHttpClientProvider;
 
-    private Provider<MovieDatabase> providesMovieDatabaseProvider;
+    private Provider<Retrofit> provideAuthRetrofitProvider;
+
+    private Provider<AuthApi> provideAuthApiProvider;
+
+    private Provider<AuthRepo> provideAuthRepoProvider;
+
+    private Provider<Retrofit> provideRetrofitProvider;
+
+    private Provider<MoviesApi> provideMoviesApiProvider;
+
+    private Provider<MovieDatabase> provideMovieDatabaseProvider;
 
     private Provider<MovieListRepoImp> movieListRepoImpProvider;
 
     private Provider<MovieListRepo> bindMovieListRepositoryProvider;
 
-    private Provider<CreditsApi> providesCreditsApiProvider;
+    private Provider<CreditsApi> provideCreditsApiProvider;
 
-    private Provider<CreditsDatabase> providesCreditsDatabaseProvider;
+    private Provider<CreditsDatabase> provideCreditsDatabaseProvider;
 
     private Provider<CreditsRepoImp> creditsRepoImpProvider;
 
@@ -574,13 +603,18 @@ public final class DaggerApp_HiltComponents_SingletonC {
 
     @SuppressWarnings("unchecked")
     private void initialize(final ApplicationContextModule applicationContextModuleParam) {
-      this.providesMovieApiProvider = DoubleCheck.provider(new SwitchingProvider<MoviesApi>(singletonCImpl, 1));
-      this.providesMovieDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<MovieDatabase>(singletonCImpl, 2));
-      this.movieListRepoImpProvider = new SwitchingProvider<>(singletonCImpl, 0);
+      this.provideOkHttpClientProvider = DoubleCheck.provider(new SwitchingProvider<OkHttpClient>(singletonCImpl, 3));
+      this.provideAuthRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 2));
+      this.provideAuthApiProvider = DoubleCheck.provider(new SwitchingProvider<AuthApi>(singletonCImpl, 1));
+      this.provideAuthRepoProvider = DoubleCheck.provider(new SwitchingProvider<AuthRepo>(singletonCImpl, 0));
+      this.provideRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonCImpl, 6));
+      this.provideMoviesApiProvider = DoubleCheck.provider(new SwitchingProvider<MoviesApi>(singletonCImpl, 5));
+      this.provideMovieDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<MovieDatabase>(singletonCImpl, 7));
+      this.movieListRepoImpProvider = new SwitchingProvider<>(singletonCImpl, 4);
       this.bindMovieListRepositoryProvider = DoubleCheck.provider((Provider) movieListRepoImpProvider);
-      this.providesCreditsApiProvider = DoubleCheck.provider(new SwitchingProvider<CreditsApi>(singletonCImpl, 4));
-      this.providesCreditsDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<CreditsDatabase>(singletonCImpl, 5));
-      this.creditsRepoImpProvider = new SwitchingProvider<>(singletonCImpl, 3);
+      this.provideCreditsApiProvider = DoubleCheck.provider(new SwitchingProvider<CreditsApi>(singletonCImpl, 9));
+      this.provideCreditsDatabaseProvider = DoubleCheck.provider(new SwitchingProvider<CreditsDatabase>(singletonCImpl, 10));
+      this.creditsRepoImpProvider = new SwitchingProvider<>(singletonCImpl, 8);
       this.bindCreditsRepositoryProvider = DoubleCheck.provider((Provider) creditsRepoImpProvider);
     }
 
@@ -617,23 +651,38 @@ public final class DaggerApp_HiltComponents_SingletonC {
       @Override
       public T get() {
         switch (id) {
-          case 0: // com.example.tweetytube.features.movieList.data.repo.MovieListRepoImp 
-          return (T) new MovieListRepoImp(singletonCImpl.providesMovieApiProvider.get(), singletonCImpl.providesMovieDatabaseProvider.get());
+          case 0: // com.example.tweetytube.features.auth.domain.repo.AuthRepo 
+          return (T) AppModule_ProvideAuthRepoFactory.provideAuthRepo(singletonCImpl.provideAuthApiProvider.get());
 
-          case 1: // com.example.tweetytube.features.movieList.data.remote.MoviesApi 
-          return (T) AppModule_ProvidesMovieApiFactory.providesMovieApi();
+          case 1: // com.example.tweetytube.features.auth.data.remote.AuthApi 
+          return (T) AppModule_ProvideAuthApiFactory.provideAuthApi(singletonCImpl.provideAuthRetrofitProvider.get());
 
-          case 2: // com.example.tweetytube.movie_list.data.repo.local.MovieDatabase 
-          return (T) AppModule_ProvidesMovieDatabaseFactory.providesMovieDatabase(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
+          case 2: // @javax.inject.Named("AuthRetrofit") retrofit2.Retrofit 
+          return (T) AppModule_ProvideAuthRetrofitFactory.provideAuthRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
 
-          case 3: // com.example.tweetytube.features.details.data.repo.CreditsRepoImp 
-          return (T) new CreditsRepoImp(singletonCImpl.providesCreditsApiProvider.get(), singletonCImpl.providesCreditsDatabaseProvider.get());
+          case 3: // okhttp3.OkHttpClient 
+          return (T) AppModule_ProvideOkHttpClientFactory.provideOkHttpClient();
 
-          case 4: // com.example.tweetytube.features.details.data.remote.CreditsApi 
-          return (T) AppModule_ProvidesCreditsApiFactory.providesCreditsApi();
+          case 4: // com.example.tweetytube.features.movieList.data.repo.MovieListRepoImp 
+          return (T) new MovieListRepoImp(singletonCImpl.provideMoviesApiProvider.get(), singletonCImpl.provideMovieDatabaseProvider.get());
 
-          case 5: // com.example.tweetytube.features.details.data.local.CreditsDatabase 
-          return (T) AppModule_ProvidesCreditsDatabaseFactory.providesCreditsDatabase(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
+          case 5: // com.example.tweetytube.features.movieList.data.remote.MoviesApi 
+          return (T) AppModule_ProvideMoviesApiFactory.provideMoviesApi(singletonCImpl.provideRetrofitProvider.get());
+
+          case 6: // @javax.inject.Named("GeneralRetrofit") retrofit2.Retrofit 
+          return (T) AppModule_ProvideRetrofitFactory.provideRetrofit(singletonCImpl.provideOkHttpClientProvider.get());
+
+          case 7: // com.example.tweetytube.movie_list.data.repo.local.MovieDatabase 
+          return (T) AppModule_ProvideMovieDatabaseFactory.provideMovieDatabase(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
+
+          case 8: // com.example.tweetytube.features.details.data.repo.CreditsRepoImp 
+          return (T) new CreditsRepoImp(singletonCImpl.provideCreditsApiProvider.get(), singletonCImpl.provideCreditsDatabaseProvider.get());
+
+          case 9: // com.example.tweetytube.features.details.data.remote.CreditsApi 
+          return (T) AppModule_ProvideCreditsApiFactory.provideCreditsApi(singletonCImpl.provideRetrofitProvider.get());
+
+          case 10: // com.example.tweetytube.features.details.data.local.CreditsDatabase 
+          return (T) AppModule_ProvideCreditsDatabaseFactory.provideCreditsDatabase(ApplicationContextModule_ProvideApplicationFactory.provideApplication(singletonCImpl.applicationContextModule));
 
           default: throw new AssertionError(id);
         }

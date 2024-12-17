@@ -48,6 +48,10 @@
         "source": "com.example.tweetytube.app-main-71:/drawable/logo_minimal.xml"
     },
     {
+        "merged": "com.example.tweetytube.app-debug-69:/drawable_tweety_login_light.xml.flat",
+        "source": "com.example.tweetytube.app-main-71:/drawable/tweety_login_light.xml"
+    },
+    {
         "merged": "com.example.tweetytube.app-debug-69:/drawable_ticket_solid.xml.flat",
         "source": "com.example.tweetytube.app-main-71:/drawable/ticket_solid.xml"
     },
@@ -76,16 +80,16 @@
         "source": "com.example.tweetytube.app-main-71:/raw/tweeting_loading.json"
     },
     {
-        "merged": "com.example.tweetytube.app-debug-69:/drawable_heart_outline.xml.flat",
-        "source": "com.example.tweetytube.app-main-71:/drawable/heart_outline.xml"
+        "merged": "com.example.tweetytube.app-debug-69:/font_poppins_extralight.ttf.flat",
+        "source": "com.example.tweetytube.app-main-71:/font/poppins_extralight.ttf"
     },
     {
         "merged": "com.example.tweetytube.app-debug-69:/font_poppins_italic.ttf.flat",
         "source": "com.example.tweetytube.app-main-71:/font/poppins_italic.ttf"
     },
     {
-        "merged": "com.example.tweetytube.app-debug-69:/font_poppins_extralight.ttf.flat",
-        "source": "com.example.tweetytube.app-main-71:/font/poppins_extralight.ttf"
+        "merged": "com.example.tweetytube.app-debug-69:/drawable_heart_outline.xml.flat",
+        "source": "com.example.tweetytube.app-main-71:/drawable/heart_outline.xml"
     },
     {
         "merged": "com.example.tweetytube.app-debug-69:/font_poppins_bolditalic.ttf.flat",
@@ -106,6 +110,10 @@
     {
         "merged": "com.example.tweetytube.app-debug-69:/font_poppins_mediumitalic.ttf.flat",
         "source": "com.example.tweetytube.app-main-71:/font/poppins_mediumitalic.ttf"
+    },
+    {
+        "merged": "com.example.tweetytube.app-debug-69:/drawable_tweety_signup_light.xml.flat",
+        "source": "com.example.tweetytube.app-main-71:/drawable/tweety_signup_light.xml"
     },
     {
         "merged": "com.example.tweetytube.app-debug-69:/mipmap-hdpi_ic_launcher.webp.flat",
@@ -176,8 +184,8 @@
         "source": "com.example.tweetytube.app-main-71:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.tweetytube.app-debug-69:/drawable_tweety_login.xml.flat",
-        "source": "com.example.tweetytube.app-main-71:/drawable/tweety_login.xml"
+        "merged": "com.example.tweetytube.app-debug-69:/drawable_tweety_login_dark.xml.flat",
+        "source": "com.example.tweetytube.app-main-71:/drawable/tweety_login_dark.xml"
     },
     {
         "merged": "com.example.tweetytube.app-debug-69:/font_poppins_medium.ttf.flat",
@@ -198,5 +206,9 @@
     {
         "merged": "com.example.tweetytube.app-debug-69:/drawable_house_solid.xml.flat",
         "source": "com.example.tweetytube.app-main-71:/drawable/house_solid.xml"
+    },
+    {
+        "merged": "com.example.tweetytube.app-debug-69:/drawable_tweety_signup_dark.xml.flat",
+        "source": "com.example.tweetytube.app-main-71:/drawable/tweety_signup_dark.xml"
     }
 ]

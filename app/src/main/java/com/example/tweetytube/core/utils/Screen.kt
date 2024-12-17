@@ -21,4 +21,7 @@ sealed class Screen {
     @Serializable
     object LoginScreen : Screen()
 
+    @Serializable
+    object SignUpScreen : Screen()
+
 }

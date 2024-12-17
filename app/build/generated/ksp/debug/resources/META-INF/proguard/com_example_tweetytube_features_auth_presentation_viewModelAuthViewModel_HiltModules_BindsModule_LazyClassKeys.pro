@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel

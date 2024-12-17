@@ -725,8 +725,11 @@ drawable tooltip_frame_light
 drawable tweeting_loading
 drawable tweety_error_dark
 drawable tweety_error_light
-drawable tweety_login
+drawable tweety_login_dark
+drawable tweety_login_light
 drawable tweety_search
+drawable tweety_signup_dark
+drawable tweety_signup_light
 drawable tweety_splash_screen
 drawable user_solid
 font poppins_black

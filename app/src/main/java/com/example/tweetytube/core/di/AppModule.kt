@@ -3,6 +3,10 @@ package com.example.tweetytube.core.di
 import android.app.Application
 import androidx.room.Room
 import com.example.tweetytube.core.utils.Urls.Companion.BASE_URL
+import com.example.tweetytube.core.utils.Urls.Companion.INTIGRATION_LAYER_URL
+import com.example.tweetytube.features.auth.data.remote.AuthApi
+import com.example.tweetytube.features.auth.data.repo.AuthRepoImp
+import com.example.tweetytube.features.auth.domain.repo.AuthRepo
 import com.example.tweetytube.features.details.data.local.CreditsDatabase
 import com.example.tweetytube.features.details.data.remote.CreditsApi
 import com.example.tweetytube.features.movieList.data.remote.MoviesApi
@@ -15,46 +19,73 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import javax.inject.Named
 import javax.inject.Singleton
-
 
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    private val interceptor: HttpLoggingInterceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY
-    }
-
-    private val client: OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(interceptor)
-        .build()
-
+    // 1. Provide OkHttpClient
     @Provides
     @Singleton
-    fun providesMovieApi(): MoviesApi {
+    fun provideOkHttpClient(): OkHttpClient {
+        val loggingInterceptor = HttpLoggingInterceptor()
+        loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
+        return OkHttpClient.Builder()
+            .addInterceptor(loggingInterceptor)
+            .build()
+    }
+
+    // 2. Provide Retrofit for General APIs
+    @Provides
+    @Singleton
+    @Named("GeneralRetrofit")
+    fun provideRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
+            .baseUrl(BASE_URL) // General base URL
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL)
             .client(client)
             .build()
-            .create(MoviesApi::class.java)
     }
 
+    // 3. Provide Retrofit for Auth API
     @Provides
     @Singleton
-    fun providesCreditsApi(): CreditsApi {
+    @Named("AuthRetrofit")
+    fun provideAuthRetrofit(client: OkHttpClient): Retrofit {
         return Retrofit.Builder()
+            .baseUrl(INTIGRATION_LAYER_URL) // Auth-specific base URL
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL)
             .client(client)
             .build()
-            .create(CreditsApi::class.java)
     }
+
+    // 4. Provide APIs using Named Retrofit Instances
+    @Provides
+    @Singleton
+    fun provideMoviesApi(@Named("GeneralRetrofit") retrofit: Retrofit): MoviesApi =
+        retrofit.create(MoviesApi::class.java)
 
     @Provides
     @Singleton
-    fun providesMovieDatabase(app: Application): MovieDatabase {
+    fun provideCreditsApi(@Named("GeneralRetrofit") retrofit: Retrofit): CreditsApi =
+        retrofit.create(CreditsApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideAuthApi(@Named("AuthRetrofit") retrofit: Retrofit): AuthApi =
+        retrofit.create(AuthApi::class.java)
+
+    // 5. Provide AuthRepo
+    @Provides
+    @Singleton
+    fun provideAuthRepo(authApi: AuthApi): AuthRepo = AuthRepoImp(authApi)
+
+    // 6. Provide Room Databases
+    @Provides
+    @Singleton
+    fun provideMovieDatabase(app: Application): MovieDatabase {
         return Room.databaseBuilder(
             app,
             MovieDatabase::class.java,
@@ -64,32 +95,11 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesCreditsDatabase(app: Application): CreditsDatabase {
+    fun provideCreditsDatabase(app: Application): CreditsDatabase {
         return Room.databaseBuilder(
             app,
             CreditsDatabase::class.java,
             "creditsdb.db"
         ).build()
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

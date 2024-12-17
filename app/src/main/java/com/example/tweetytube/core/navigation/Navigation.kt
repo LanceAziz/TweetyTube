@@ -18,6 +18,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import com.example.tweetytube.core.utils.Screen.*
 import com.example.tweetytube.features.auth.presentation.screens.Login
+import com.example.tweetytube.features.auth.presentation.screens.SignUp
+import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel
 import com.example.tweetytube.features.details.presentation.screens.Details
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.favorites.presentation.screens.Favorites
@@ -36,7 +38,8 @@ fun NavigationComponent(
     modifier: Modifier = Modifier,
     navController: NavHostController,
     sharedViewModel: MovieListViewModel,
-    detailsViewModel: DetailsViewModel
+    detailsViewModel: DetailsViewModel,
+    authViewModel: AuthViewModel
 ) {
     val animations = AnimationTransitions(
         enterTransition = {
@@ -52,7 +55,7 @@ fun NavigationComponent(
             .padding(16.dp)
             .clip(RoundedCornerShape(36.dp)),
         navController = navController,
-        startDestination = LoginScreen
+        startDestination = FavoriteScreen
     ) {
         composable<HomeScreen>(
             enterTransition = { animations.enterTransition() },
@@ -73,7 +76,9 @@ fun NavigationComponent(
             popEnterTransition = { animations.enterTransition() },
             popExitTransition = { animations.exitTransition() }
         ) {
-            Favorites()
+            Favorites(navController = sharedViewModel, goToDetails = { id ->
+                navController.navigate(DetailsScreen(id))
+            })
         }
         composable<ProfileScreen>(
             enterTransition = { animations.enterTransition() },
@@ -89,7 +94,15 @@ fun NavigationComponent(
             popEnterTransition = { animations.enterTransition() },
             popExitTransition = { animations.exitTransition() }
         ) {
-            Login()
+            Login(navController = navController, authViewModel = authViewModel)
+        }
+        composable<SignUpScreen>(
+            enterTransition = { animations.enterTransition() },
+            exitTransition = { animations.exitTransition() },
+            popEnterTransition = { animations.enterTransition() },
+            popExitTransition = { animations.exitTransition() }
+        ) {
+            SignUp(navController = navController, authViewModel = authViewModel)
         }
         composable<SearchScreen>(
             enterTransition = { animations.enterTransition() },
