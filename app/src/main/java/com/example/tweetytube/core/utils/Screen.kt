@@ -10,6 +10,14 @@ sealed class Screen {
     data class DetailsScreen(val id: Int) : Screen()
 
     @Serializable
+    data class ActorDetailsScreen(
+        val id: Int,
+        val actorName: String,
+        val actorImage: String,
+        val actorRole: String,
+    ) : Screen()
+
+    @Serializable
     object FavoriteScreen : Screen()
 
     @Serializable

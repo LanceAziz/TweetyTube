@@ -1,10 +1,10 @@
 package com.example.tweetytube.features.movieList.data.repo
 
+import com.example.tweetytube.core.utils.Resource
 import com.example.tweetytube.features.movieList.data.mappers.toMovie
 import com.example.tweetytube.features.movieList.data.mappers.toMovieEntity
-import com.example.tweetytube.features.movieList.domain.repo.MovieListRepo
 import com.example.tweetytube.features.movieList.data.remote.MoviesApi
-import com.example.tweetytube.core.utils.Resource
+import com.example.tweetytube.features.movieList.domain.repo.MovieListRepo
 import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.movie_list.data.repo.local.MovieDatabase
 import kotlinx.coroutines.flow.Flow
@@ -13,12 +13,12 @@ import javax.inject.Inject
 
 class MovieListRepoImp @Inject constructor(
     private val movieApi: MoviesApi,
-    private val movieDatabase: MovieDatabase
+    private val movieDatabase: MovieDatabase,
 ) : MovieListRepo {
     override suspend fun getMovieList(
         forceFetchFromRemote: Boolean,
         category: String,
-        page: Int
+        page: Int,
     ): Flow<Resource<List<Movie>>> {
         return flow {
             emit(Resource.Loading(true))
@@ -62,12 +62,14 @@ class MovieListRepoImp @Inject constructor(
         return flow {
             emit(Resource.Loading(true))
             val movieEntity = movieDatabase.movieDao.getMovieById(id)
-            if (true) {
+            if (movieEntity != null) {
+                // Safely emit the movie if it exists
                 emit(
                     Resource.Success(movieEntity.toMovie(movieEntity.category))
                 )
-                emit(Resource.Loading(false))
-                return@flow
+            } else {
+                // Handle the case where movieEntity is null (no movie found)
+                emit(Resource.Error("Error: Movie not found"))
             }
             emit(Resource.Error("Error no such movie"))
             emit(Resource.Loading(false))

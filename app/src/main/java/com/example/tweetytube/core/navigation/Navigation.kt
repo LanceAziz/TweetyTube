@@ -17,6 +17,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
 import com.example.tweetytube.core.utils.Screen.*
+import com.example.tweetytube.features.actorDeatils.presentation.screens.ActorDetails
+import com.example.tweetytube.features.actorDeatils.presentation.viewModel.ActorDetailsViewModel
 import com.example.tweetytube.features.auth.presentation.screens.Login
 import com.example.tweetytube.features.auth.presentation.screens.SignUp
 import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel
@@ -42,7 +44,8 @@ fun NavigationComponent(
     detailsViewModel: DetailsViewModel,
     authViewModel: AuthViewModel,
     favoritesViewModel: FavoritesViewModel,
-    userToken: String?
+    actorDetailsViewModel: ActorDetailsViewModel,
+    userToken: String?,
 ) {
     val animations = AnimationTransitions(
         enterTransition = {
@@ -137,7 +140,30 @@ fun NavigationComponent(
                 id = details.id,
                 userToken = userToken,
                 favoritesViewModel = favoritesViewModel,
-                detailsViewModel = detailsViewModel
+                detailsViewModel = detailsViewModel,
+                goToActorDetails = { id: Int, actorName: String, actorImage: String, actorRole: String ->
+                    navController.navigate(ActorDetailsScreen(id, actorName, actorImage, actorRole))
+                } as (Int, String, String, String) -> Unit
+            )
+        }
+
+        composable<ActorDetailsScreen>(
+            enterTransition = { animations.enterTransition() },
+            exitTransition = { animations.exitTransition() },
+            popEnterTransition = { animations.enterTransition() },
+            popExitTransition = { animations.exitTransition() }
+        )
+        {
+            val actorDetails = requireNotNull(it.toRoute<ActorDetailsScreen>())
+            ActorDetails(
+                id = actorDetails.id,
+                actorName = actorDetails.actorName,
+                actorImage = actorDetails.actorImage,
+                actorRole = actorDetails.actorRole,
+                actorDetailsViewModel = actorDetailsViewModel,
+                goToDetails = { id ->
+                    navController.navigate(DetailsScreen(id))
+                }
             )
         }
     }

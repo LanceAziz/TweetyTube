@@ -14,7 +14,11 @@ import com.example.tweetytube.features.details.domain.model.Credits
 import com.example.tweetytube.features.details.presentation.components.microCard.MicroCard
 
 @Composable
-fun CollectionRow(title: String, credits: List<Credits>) {
+fun CollectionRow(
+    title: String,
+    credits: List<Credits>,
+    goToActorDetails: (Int, String, String, String) -> Unit,
+) {
     Text(
         text = title,
         fontSize = 20.sp,
@@ -24,7 +28,14 @@ fun CollectionRow(title: String, credits: List<Credits>) {
     LazyRow {
         items(1) {
             credits.forEach {
-                MicroCard(image = it.profile_path, name = it.name, type = it.character)
+                MicroCard(
+                    id = it.id,
+                    image = it.profile_path,
+                    name = it.name,
+                    type = it.character,
+                    role = it.known_for_department,
+                    goToActorDetails = goToActorDetails
+                )
                 Spacer(Modifier.width(20.dp))
             }
         }

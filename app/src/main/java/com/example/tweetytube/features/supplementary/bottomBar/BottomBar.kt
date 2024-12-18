@@ -33,9 +33,10 @@ import com.exyte.animatednavbar.animation.indendshape.shapeCornerRadius
 
 
 enum class NavBarItems(val text: String, @DrawableRes val icon: Int, val navigation: Screen) {
-    Favourite(text = "Fav", icon = R.drawable.heart_solid, navigation = Screen.FavoriteScreen),
     Feed(text = "Home", icon = R.drawable.house_solid, navigation = Screen.HomeScreen),
-    Profile(text = "Profile", icon = R.drawable.user_solid, navigation = Screen.ProfileScreen)
+    Favourite(text = "Fav", icon = R.drawable.heart_solid, navigation = Screen.FavoriteScreen),
+
+//    Profile(text = "Profile", icon = R.drawable.user_solid, navigation = Screen.ProfileScreen)
 }
 
 @Composable
@@ -43,7 +44,7 @@ fun BottomNavbar(
     navController: NavHostController,
     modifier: Modifier = Modifier,
 ) {
-    var selectedIndex by rememberSaveable { mutableIntStateOf(1) }
+    var selectedIndex by rememberSaveable { mutableIntStateOf(0) }
     AnimatedNavigationBar(
         modifier = modifier
             .padding()

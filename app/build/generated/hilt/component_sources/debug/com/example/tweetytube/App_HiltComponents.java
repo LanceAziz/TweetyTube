@@ -2,6 +2,7 @@ package com.example.tweetytube;
 
 import com.example.tweetytube.core.di.AppModule;
 import com.example.tweetytube.core.di.RepositoryModule;
+import com.example.tweetytube.features.actorDeatils.presentation.viewModel.ActorDetailsViewModel_HiltModules;
 import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel_HiltModules;
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel_HiltModules;
 import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel_HiltModules;
@@ -158,6 +159,7 @@ public final class App_HiltComponents {
 
   @Subcomponent(
       modules = {
+          ActorDetailsViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class,
           AuthViewModel_HiltModules.KeyModule.class,
@@ -201,6 +203,7 @@ public final class App_HiltComponents {
 
   @Subcomponent(
       modules = {
+          ActorDetailsViewModel_HiltModules.BindsModule.class,
           AuthViewModel_HiltModules.BindsModule.class,
           DetailsViewModel_HiltModules.BindsModule.class,
           FavoritesViewModel_HiltModules.BindsModule.class,

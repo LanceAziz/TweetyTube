@@ -39,7 +39,6 @@ import com.example.tweetytube.features.details.presentation.components.collectio
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
 import com.example.tweetytube.features.supplementary.loading.LoadingAnimation
-import com.example.tweetytube.ui.theme.errorLight
 import com.example.tweetytube.ui.theme.secondaryLight
 
 @Composable
@@ -47,7 +46,8 @@ fun Details(
     id: Int,
     detailsViewModel: DetailsViewModel = hiltViewModel(),
     favoritesViewModel: FavoritesViewModel,
-    userToken: String?
+    goToActorDetails:  (Int, String, String, String) -> Unit,
+    userToken: String?,
 ) {
     val isFavorite = favoritesViewModel.isFavorited(id)
     val detailsState by detailsViewModel.detailsState.collectAsState()
@@ -116,7 +116,11 @@ fun Details(
                                     fontSize = 14.sp,
                                 )
                             }
-                            CollectionRow(title = "Cast", credits = detailsState.credits)
+                            CollectionRow(
+                                title = "Cast",
+                                credits = detailsState.credits,
+                                goToActorDetails = goToActorDetails
+                            )
                         }
                     }
                 }

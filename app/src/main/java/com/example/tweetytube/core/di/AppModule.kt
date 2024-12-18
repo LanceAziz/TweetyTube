@@ -4,15 +4,19 @@ import android.app.Application
 import androidx.room.Room
 import com.example.tweetytube.core.utils.Urls.Companion.BASE_URL
 import com.example.tweetytube.core.utils.Urls.Companion.INTIGRATION_LAYER_URL
+import com.example.tweetytube.features.actorDeatils.data.local.MovieDetDatabase
+import com.example.tweetytube.features.actorDeatils.data.remote.MovieDetApi
+import com.example.tweetytube.features.actorDeatils.data.repo.MovieDetRepoImp
+import com.example.tweetytube.features.actorDeatils.domain.repo.MovieDetRepo
 import com.example.tweetytube.features.auth.data.remote.AuthApi
 import com.example.tweetytube.features.auth.data.repo.AuthRepoImp
 import com.example.tweetytube.features.auth.domain.repo.AuthRepo
 import com.example.tweetytube.features.details.data.local.CreditsDatabase
 import com.example.tweetytube.features.details.data.remote.CreditsApi
-import com.example.tweetytube.features.movieList.data.remote.MoviesApi
 import com.example.tweetytube.features.favorites.data.remote.FavoritesApi
 import com.example.tweetytube.features.favorites.data.repo.FavoritesRepoImp
 import com.example.tweetytube.features.favorites.domain.repo.FavoritesRepo
+import com.example.tweetytube.features.movieList.data.remote.MoviesApi
 import com.example.tweetytube.movie_list.data.repo.local.MovieDatabase
 import dagger.Module
 import dagger.Provides
@@ -85,6 +89,11 @@ object AppModule {
     fun provideFavoritesApi(@Named("AuthRetrofit") retrofit: Retrofit): FavoritesApi =
         retrofit.create(FavoritesApi::class.java)
 
+    @Provides
+    @Singleton
+    fun provideMovieDetApi(@Named("GeneralRetrofit") retrofit: Retrofit): MovieDetApi =
+        retrofit.create(MovieDetApi::class.java)
+
     // 5. Provide Repos
     @Provides
     @Singleton
@@ -94,6 +103,13 @@ object AppModule {
     @Singleton
     fun provideFavoritesRepo(favoritesApi: FavoritesApi): FavoritesRepo =
         FavoritesRepoImp(favoritesApi)
+
+    @Provides
+    @Singleton
+    fun provideMovieDetRepo(
+        movieDetApi: MovieDetApi,
+        movieDetDatabase: MovieDetDatabase
+    ): MovieDetRepo = MovieDetRepoImp(movieDetApi, movieDetDatabase)
 
     // 6. Provide Room Databases
     @Provides
@@ -113,6 +129,16 @@ object AppModule {
             app,
             CreditsDatabase::class.java,
             "creditsdb.db"
+        ).build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideMovieDetDatabase(app: Application): MovieDetDatabase {
+        return Room.databaseBuilder(
+            app,
+            MovieDetDatabase::class.java,
+            "moviedetdb.db"
         ).build()
     }
 }

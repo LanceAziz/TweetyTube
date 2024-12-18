@@ -19,6 +19,7 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.tweetytube.core.navigation.NavigationComponent
 import com.example.tweetytube.core.utils.Screen
+import com.example.tweetytube.features.actorDeatils.presentation.viewModel.ActorDetailsViewModel
 import com.example.tweetytube.features.auth.presentation.viewModel.AuthViewModel
 import com.example.tweetytube.features.details.presentation.viewModel.DetailsViewModel
 import com.example.tweetytube.features.favorites.presentation.viewModel.FavoritesViewModel
@@ -39,6 +40,7 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 val sharedMovieListViewModel = hiltViewModel<MovieListViewModel>()
                 val detailsViewModel = hiltViewModel<DetailsViewModel>()
+                val actorDetailsViewModel = hiltViewModel<ActorDetailsViewModel>()
                 val authViewModel = hiltViewModel<AuthViewModel>()
                 val favoritesViewModel = hiltViewModel<FavoritesViewModel>()
 
@@ -70,6 +72,7 @@ class MainActivity : ComponentActivity() {
                         detailsViewModel = detailsViewModel,
                         authViewModel = authViewModel,
                         favoritesViewModel = favoritesViewModel,
+                        actorDetailsViewModel=actorDetailsViewModel,
                         userToken = userToken
                     )
                 }

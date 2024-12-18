@@ -1,6 +1,7 @@
 package com.example.tweetytube.features.movieList.data.remote
 
 import com.example.tweetytube.core.utils.Urls.Companion.MOVIES_API_KEY
+import com.example.tweetytube.movie_list.data.repo.remote.response.MovieDto
 import com.example.tweetytube.movie_list.data.repo.remote.response.MovieListDto
 import retrofit2.http.GET
 import retrofit2.http.Path

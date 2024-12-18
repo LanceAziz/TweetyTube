@@ -1,6 +1,5 @@
 package com.example.tweetytube.features.details.data.repo
 
-import android.util.Log
 import com.example.tweetytube.core.utils.Resource
 import com.example.tweetytube.features.details.data.local.CreditsDatabase
 import com.example.tweetytube.features.details.data.mappers.toCredits

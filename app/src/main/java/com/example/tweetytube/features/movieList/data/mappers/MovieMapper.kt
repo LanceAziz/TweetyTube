@@ -1,8 +1,10 @@
 package com.example.tweetytube.features.movieList.data.mappers
 
+import com.example.tweetytube.features.actorDeatils.data.remote.response.MovieDetListDto
 import com.example.tweetytube.movie_list.data.repo.local.Movie
 import com.example.tweetytube.movie_list.data.repo.local.MovieEntity
 import com.example.tweetytube.movie_list.data.repo.remote.response.MovieDto
+import com.example.tweetytube.movie_list.data.repo.remote.response.MovieListDto
 
 fun MovieDto.toMovieEntity(
     category: String

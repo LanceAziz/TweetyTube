@@ -1,11 +1,12 @@
 package com.example.tweetytube.features.details.presentation.components.microCard
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -30,14 +31,24 @@ import com.example.tweetytube.R
 import com.example.tweetytube.core.utils.Urls.Companion.IMAGE_BASE_URL
 import com.example.tweetytube.ui.theme.bgDark
 import com.example.tweetytube.ui.theme.bgLight
-import com.example.tweetytube.ui.theme.primaryDark
-import com.example.tweetytube.ui.theme.primaryLight
 
 @Composable
-fun MicroCard(image: String, name: String, type: String) {
+fun MicroCard(
+    id: Int,
+    image: String,
+    name: String,
+    type: String,
+    role: String,
+    goToActorDetails: (Int, String, String, String) -> Unit,
+) {
+    Log.d("MicroCard", "image: $name")
     val isDarkTheme = isSystemInDarkTheme()
     Column(
-        modifier = Modifier.width(180.dp)
+        modifier = Modifier
+            .width(180.dp)
+            .clickable {
+                goToActorDetails(id,name,image,role)
+            }
     ) {
         if (image.isNotEmpty()) {
             AsyncImage(
@@ -54,12 +65,18 @@ fun MicroCard(image: String, name: String, type: String) {
                     .width(180.dp)
                     .height(270.dp)
                     .clip(RoundedCornerShape(28.dp))
-                    .background(if(isDarkTheme) bgLight else bgDark),
+                    .background(if (isDarkTheme) bgLight else bgDark),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Image(
-                    painter = painterResource(if(isDarkTheme) {R.drawable.tweety_error_light} else {R.drawable.tweety_error_dark}),
+                    painter = painterResource(
+                        if (isDarkTheme) {
+                            R.drawable.tweety_error_light
+                        } else {
+                            R.drawable.tweety_error_dark
+                        }
+                    ),
                     contentDescription = "Tweety Tube Logo",
                     modifier = Modifier
                         .size(150.dp)
