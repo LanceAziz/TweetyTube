@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/Image 0.gif" alt="Tweety Tube Logo" width="200">
+  <img src="images/Image0.gif" alt="Tweety Tube Logo" width="200">
 </div>
 
 # Tweety Tube
