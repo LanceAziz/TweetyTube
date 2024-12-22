@@ -33,14 +33,14 @@ internship at Atos Egypt.
 
 ## ScreenShots
 <div align="center">
-  <img src="Images/Image1.png" alt="Example1" width="300">
-  <img src="Images/Image2.png" alt="Example1" width="300">
-  <img src="Images/Image3.png" alt="Example1" width="300">
-  <img src="Images/Image4.png" alt="Example1" width="300">
-  <img src="Images/Image5.png" alt="Example1" width="300">
-  <img src="Images/Image6.png" alt="Example1" width="300">
-  <img src="Images/Image7.png" alt="Example1" width="300">
-  <img src="Images/Image8.png" alt="Example1" width="300">
-  <img src="Images/Image9.png" alt="Example1" width="300">
+  <img src="Images/Image1.png" alt="Example1" width="250">
+  <img src="Images/Image2.png" alt="Example1" width="250">
+  <img src="Images/Image3.png" alt="Example1" width="250">
+  <img src="Images/Image4.png" alt="Example1" width="250">
+  <img src="Images/Image5.png" alt="Example1" width="250">
+  <img src="Images/Image6.png" alt="Example1" width="250">
+  <img src="Images/Image7.png" alt="Example1" width="250">
+  <img src="Images/Image8.png" alt="Example1" width="250">
+  <img src="Images/Image9.png" alt="Example1" width="250">
 </div>
 
