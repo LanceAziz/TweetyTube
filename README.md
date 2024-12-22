@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/logo.png" alt="Tweety Tube Logo" width="200">
+  <img src="images/Image 0.gif" alt="Tweety Tube Logo" width="200">
 </div>
 
 # Tweety Tube
@@ -8,13 +8,9 @@ Tweety Tube is an Android movie streaming application built using Kotlin, Jetpac
 
 ## Features
 - **Home Screen**: Displays a collection of movies categorized into rows.
-  ![Home Screen](images/home_screen.png)
 - **Movie Details**: View detailed information about any movie, including its title, description, cast, and more.
-  ![Movie Details](images/movie_details.png)
 - **Actor Detail Screen**: Explore detailed information about actors, including a list of related movies.
-  ![Actor Details](images/actor_details.png)
 - **Bottom Navigation Bar**: Easy navigation between different app sections.
-  ![Bottom Navigation](images/bottom_navigation.png)
 - **Category Management**: Efficiently organize and manage favorite items with ease.
 - **User Authentication**: Secure login and signup to ensure data protection.
 - **Search Functionality**: Quickly locate content with a responsive search system.
